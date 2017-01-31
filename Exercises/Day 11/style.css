@@ -1,0 +1,27 @@
+body{
+   margin:10% 0% 0% 30%;
+  
+}
+
+table, th, td {
+    text-align: center;
+  border:2px black solid; 
+    color: white;
+    font-size: 150%;
+    
+}
+
+
+tr:nth-child(odd) {
+    background-color: #C8428E;
+  
+}
+
+tr:nth-child(even) {
+    background-color: #7DB807;
+  
+}
+
+th{
+    color:black;
+}

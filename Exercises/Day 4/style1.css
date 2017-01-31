@@ -1,0 +1,32 @@
+body{
+    margin-right: 30px;
+    margin-left: 30px;
+}
+h1{
+    color: darkgreen;
+    font-family: cursive;
+    text-align: center;
+}
+h4{
+     font-family: cursive;
+    text-align: center;
+}
+
+p{
+    line-height:  height: 25px ;
+}
+
+a{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+div{
+    text-transform: uppercase;
+}
+
+img {
+    float: left;
+    width: 200px;
+}

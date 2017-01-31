@@ -1,0 +1,32 @@
+<html>
+<head>
+	<title>Calculator</title>
+	<link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+<body>
+	<div>
+              <label class="box">First Num</label>
+                    <input type="text" id="num1" size="15" placeholder="Enter First Number"/ class="answer-box"> 
+                <select name="opr" id="opr" class="opr-box">
+				        <option value="">Select Operand</option>
+				        <option value="+">+</option>
+                        <option value="-">-</option>
+                        <option value="*">*</option>
+                        <option value="/">/</option>
+                        <option value="%">%<option>
+			     </select>
+            <label class="box">Second Num</label>
+		        <input type="text" id="num2" size="15" placeholder="Enter Second Number" class="answer-box"/>
+	</div>
+    <br/>	
+    <div>
+	       <input type="button" id="Calculate" value="Calculate" onclick="myCal(num1,num2)"/>
+    </div>
+    <br/>
+	<div>
+                <label>The Result is :</label> 
+                <input id = "result" size ="10" class="box-border" disabled >
+    </div>
+               <script type="text/javascript" language="javascript" src="script-cal1.js"></script>
+</body>
+</html>

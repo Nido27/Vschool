@@ -1,0 +1,41 @@
+h1{
+    background-color: green;
+}
+.t1{
+    background-color: pink;
+}
+
+body{ margin: 20px 10px 20px 10px;
+    text-align: center;
+    background-color: black;
+    
+}
+
+#n1{
+    color: darkblue;
+    border: 20px pink solid;
+    background-color: coral;
+    padding: 20px ;
+}
+
+.t1 #n2{
+    
+    border: 10px darkgreen solid;
+    color: darkgreen;
+    background-color: gray;
+}
+
+P{
+    color: aqua;
+    background-color: gray;
+    text-align: center;
+    border: 5px green dotted;
+     display: inline-block;
+}
+
+img{
+    width: 100px;
+    text-align: center;
+    float: right;
+
+}

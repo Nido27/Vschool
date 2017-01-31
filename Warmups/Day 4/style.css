@@ -1,0 +1,21 @@
+.t1{
+    color: red;
+    border: 20px black solid;
+    background-color: yellow;
+    margin-top: 50px;
+    text-align: center;
+}
+#n2{
+    font-size: 20px;
+}
+#n1{
+    font-size:50px;
+}
+
+.t2{
+    color:green;
+    background-color: yellow;
+    margin-top: 30px;
+    text-align: center;
+    border: 20px blue dotted;
+}

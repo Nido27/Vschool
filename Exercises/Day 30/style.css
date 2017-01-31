@@ -1,0 +1,30 @@
+head,body {
+    background-image: url(recycled_texture_background.jpg);
+    padding: 10px;
+}
+
+.input {
+    margin-top: 5%;
+    text-align: center;
+}
+img {
+    width: 20%;
+    border-radius: 25px;
+}
+
+.row {
+    margin-top: 2%;
+}
+
+.text{
+    color: red;
+    font-family: 'Rammetto One', cursive;
+    font-size: 20px;
+}
+
+label{
+    color: black;
+    font-family: 'Rammetto One', cursive;
+    font-size: 20px;
+    background-color: aliceblue;
+}

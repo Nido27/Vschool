@@ -1,0 +1,30 @@
+p{ color:red;
+    font-size: 80px;   
+}
+
+.t1 { color:red;
+    font-size:50px;
+    border: 20px red dotted;
+    background-color: darkblue;
+    text-align: center;
+     margin-top: 100px;
+}
+.t2{
+    color:brown;
+    font-size: 50px;
+    border: 10px green  solid;
+    background-color: yellowgreen;
+    text-align: center ; 
+    margin-top: 100px;
+    padding: 100px 100px 100px 100px; 
+}
+
+
+
+}
+.t3 { color:green;
+    font-size: 80px;
+    border: 20px darkblue dotted;
+    background-color: yellow;
+    text-align: center;
+}

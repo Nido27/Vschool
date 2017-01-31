@@ -1,0 +1,87 @@
+{
+    "appetizers" : [
+        {
+            "name":"chips",
+            "ingredients" :"chips",
+            "Price":2
+        },
+        {
+            "name":"chips",
+            "ingredients" :"chips",
+            "Price":2
+        },
+        {
+            "name":"carot",
+            "ingredients" :"carots cgcgbc",
+            "Price":"2"
+        }
+    ],
+    "cold sandwiches" : [
+        {
+            "name":"labne",
+            "ingredients" :["5ebez","zet", "zayton"],
+            "Price":4
+        },
+        {
+            "name":"jebne",
+            "ingredients" :"5abez jabne zayton",
+            "Price":3
+        },
+        {
+            "name":"7aloun ",
+            "ingredients" :"7alon w 5abez",
+            "Price":3
+        }
+    ],
+     "hot sandwiches" : [
+        {
+            "name":"tawoouk",
+            "ingredients" :"tawok and brid and toom",
+            "Price":5
+        },
+        {
+            "name":"shawrma ",
+            "ingredients" :"la7me w dajej w tom ",
+            "Price":10
+        },
+        {
+            "name":"burger",
+            "ingredients" :"la7me 5abez batata w katshab",
+            "Price":4
+        }
+    ],
+    "desserts" : [
+        {
+            "name":"cake",
+            "ingredients" :"cake and chocolae",
+            "Price":4
+        },
+        {
+            "name":"furits",
+            "ingredients" :"apple banana watermelon",
+            "Price":10
+        },
+        {
+            "name":"crep",
+            "ingredients" :"crep and chocolate ",
+            "Price":5
+        }
+    ],
+    "drinks" : [
+        {
+            "name":"wate",
+            "ingredients" :"h2o",
+            "Price":1
+        },
+        {
+            "name":"pepsi",
+            "ingredients" :"colors and ascid and sugur",
+            "Price":3
+        },
+        {
+            "name":"jucie ",
+            "ingredients" :"colors and sugur and water",
+            "Price":2
+        }
+    ]
+}

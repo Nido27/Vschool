@@ -1,0 +1,40 @@
+P{ 
+    text-align: center;
+    display: inline-block;
+    width: 400px;
+    vertical-align: TOP;
+    background-color: gray;
+}
+
+div{
+    margin: 10px;
+     text-align: center;
+    display: inline-block;
+    width: 400px;
+    vertical-align: TOP;
+    background-color: darkgreen;
+}
+head,body{
+ margin: 50px;
+    text-align: center;
+}
+img{
+    width: 200px;
+   
+}
+h1{ 
+    background: green;
+    width: 500px;
+}
+
+h1, h4{
+     text-align: center;
+}
+
+h4{
+    width: 50px;
+
+}
+
+
+

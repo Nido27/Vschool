@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+    margin: 15% 0% 0% 33%;
+    text-align: center;
+    display: inline-block;
+}
+
+input{
+    text-align: center;
+}
+
+.box-border{
+    border: 1px black solid;
+    padding: 5px;
+    margin:0% 2% 0% 6%;
+    background-color: grey;
+    color: darkblue;
+}
+
+.box{
+    
+    border:2px pink solid;
+    padding: 5px;
+    background-color: blue;
+    color: white;
+    font-weight: ;
+}
+
+
+.answer-box{
+    
+    border:2px DC497A solid;
+    padding: 5px;
+    background-color: green;
+    color: black;
+    font-weight: ;
+}
+
+
+.opr-box{
+    
+background-color: red;
+}

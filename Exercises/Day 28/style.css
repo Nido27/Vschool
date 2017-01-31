@@ -1,0 +1,16 @@
+head,body{
+    background-image: url(background.jpg);
+    margin-top: 10%;
+}
+.text{
+    text-align: center;
+    color: red;
+    font-size: 20px;
+}
+
+
+h1{
+    color: blue;
+    font-size: 100px;
+    text-align: center;
+}

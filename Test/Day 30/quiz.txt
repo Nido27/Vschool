@@ -1,0 +1,63 @@
+	1.How would I select all the <p> tags with jQuery?
+		$("p")
+		
+	2. How would I select all the elements with class=”my-class” in jQuery?
+		$(".my-class")
+		
+	3. If you had an input box(<input id=’my-input’>), how would you log the value to the console using jQuery?
+	$("#my-input").value();
+	
+	4. In the previous example, how would you assign the value to “apple”?
+	$("#my-input").value("apple”);
+	
+	5. Which of the following is correct JSON? C
+	a.    { color: Bob, friends:[Eric, Tanner, Joe]}
+	b.    { ‘color’: ‘Bob’; ‘friends’: ‘Eric’, ‘Tanner’, ‘Joe’]}
+	c.    { “color”: “Bob”, “friends”: [“Eric”, “Tanner”, “Joe”]}
+	d.    { color: “Bob”; friends: {“Eric”, “Tanner”, “Joe”}}
+	
+	6. Translate the following code from JavaScript to jQuery
+	document.getElementById(“cool-div”).innerHTML = “Hello”
+	$(#cool-div).innerHTML=“Hello”;
+	
+	7. Translate the following code from JavaScript to jQuery
+	theBox.addEventListener(“click”, function(){
+	  console.log(“success”);
+	})
+	$("theBox").click(function(){
+	console.log(“success”);
+	})
+	8. Mark the methods that help me traverse in jQuery ? all on them
+	next()
+	prev()
+	last()
+	first()
+	siblings()
+	find()
+	children()
+	parent()
+	
+	9. Write a block of JSON that represents 2 cars that have the attributes color, model, variation. Each variation has three options (small, medium, large)
+	
+	
+   [
+        {
+            "model":"2003",
+            "color":"black",
+            "variation":["small", "medium", "large"],
+        },
+        {
+            "color":"2005",
+            "color" :"white",
+            "variation":["small", "medium", "large"]
+        },
+    ]
+
+	10. If I have the following html, write jQuery that would change the “square” I clicked to green.(Do as much as you can from memory and then use google)
+	<div class=’square’></div>
+	<div class=’square’></div>
+	<div class=’square’></div>
+	<div class=’square’></div>
+	$(".square").click(function(){
+	$(this).css("color","green);
+	})

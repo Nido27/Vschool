@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    </head>
+    <body>
+    <form name="sci-calc" >
+        <div class="container-fluid cal">
+            <div class="row">
+                <input name="display" value="0" size="28" maxlength="25"><br/>
+                <input type="button" value=" exp " onclick="if (checkNum(this.form.display.value)) { exp(this.form) }">
+                <input type="button" value="  7  " onclick="addChar(this.form.display, '7')">
+                <input type="button" value="  8  " onclick="addChar(this.form.display, '8')">
+                <input type="button" value="  9  " onclick="addChar(this.form.display, '9')">
+                <input type="button" value="   /   " onclick="addChar(this.form.display, '/')"> <br/>
+            </div>
+            <div class="row">
+                <input type="button" value="   ln   " onclick="if (checkNum(this.form.display.value)) { ln(this.form) }">
+                <input type="button" value="  4  " onclick="addChar(this.form.display, '4')">
+                <input type="button" value="  5  " onclick="addChar(this.form.display, '5')">
+                <input type="button" value="  6  " onclick="addChar(this.form.display, '6')">
+                <input type="button" value="   *   " onclick="addChar(this.form.display, '*')"><br/>
+            </div>
+             <div class="row">
+                 <input type="button" value=" sqrt " onclick="if (checkNum(this.form.display.value)) { sqrt(this.form) }">
+                 <input type="button" value="  1  " onclick="addChar(this.form.display, '1')">
+                 <input type="button" value="  2  " onclick="addChar(this.form.display, '2')">
+                 <input type="button" value="  3  " onclick="addChar(this.form.display, '3')">
+                 <input type="button" value="   -   " onclick="addChar(this.form.display, '-')"><br/>
+            </div>
+            <div class="row">
+                <input type="button" value="  sq  " onclick="if (checkNum(this.form.display.value)) { square(this.form) }">
+                <input type="button" value="  0  " onclick="addChar(this.form.display, '0')">
+                <input type="button" value="   .  " onclick="addChar(this.form.display, '.')">
+                <input type="button" value=" +/- " onclick="changeSign(this.form.display)">
+                <input type="button" value="   +  " onclick="addChar(this.form.display, '+')"><br/>
+            </div>
+            <div class="row">
+                <input type="button" value="    (    " onclick="addChar(this.form.display, '(')">
+                <input type="button" value="cos" onclick="if (checkNum(this.form.display.value)) { cos(this.form) }">
+                <input type="button" value=" sin" onclick="if (checkNum(this.form.display.value)) { sin(this.form) }">
+                <input type="button" value=" tan" onclick="if (checkNum(this.form.display.value)) { tan(this.form) }">
+                <input type="button" value="   )   " onclick="addChar(this.form.display, ')')"><br/>
+            </div>
+            <div class="row">  
+                <input type="button" value="clear" onclick="this.form.display.value = 0 ">
+                <input type="button" value="backspace" onclick="deleteChar(this.form.display)">
+                <input type="button" value="enter" name="enter" onclick="if (checkNum(this.form.display.value)) { compute(this.form) }"><br/>
+        </div>
+        </div>
+</form>
+
+
+    </body>
+</html>

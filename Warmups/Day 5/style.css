@@ -1,0 +1,29 @@
+#t1{
+    color: aqua;
+}
+.N1{
+    color: green;
+    text-align: center;
+    padding: 50px;
+    
+}
+
+.N2{
+    margin: 90px;
+    font-size: 30px;
+}
+
+.N2 #t2{
+    background-color: pink;
+    border: 40px red solid;
+}
+
+
+img {float: right;
+    width: 200px;
+    
+}
+
+P{ text-align: center;
+    color: blue;
+}
