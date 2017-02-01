@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 50px;
+    text-align: center;
+}
+
+.block {
+    padding: 10%;
+    width: 40%;
+    margin: 1%;
+    display: inline-block;
+}
+
+.green {
+    background-color: green;
+    border: 1px green solid;
+}
+
+.red {
+    background-color: red;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.blue {
+    background-color: blue;
+}
+
+@media(max-width:700px) {
+    .block {
+        width: 100%;
+    }
+}
