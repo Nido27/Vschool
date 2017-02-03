@@ -9,7 +9,7 @@ var startClock = function () {
         }
         if (counter === 0) {
             clearInterval(counter);
-            alert("Gove over go to hell")
+            alert("Gove over stop clicking")
 
         }
     }, 100);

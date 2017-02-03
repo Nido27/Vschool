@@ -20,7 +20,7 @@
 
 body{
     background-image: url(http://images6.fanpop.com/image/photos/37700000/Mario-Jump-GIF-super-mario-bros-37766025-500-470.gif);
-     background-size: 100% 100%;
+     background-size: cover;
     background-repeat: no-repeat;
     height: 1600px;
 }
