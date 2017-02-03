@@ -1,0 +1,100 @@
+body {
+    background-color: #226e85 !important;
+    height: 1000px;
+}
+
+.navbar-default {
+    background-color: #72b9d7 !important;
+    font-size: 20px;
+    border: #72b9d7 2px solid !important;
+    
+}
+a{
+    color: #effcff !important;
+}
+.mar {
+    margin: 4% 0% 4% 0%;
+}
+.mar1{
+   margin: 3%; 
+}
+.martop{
+    margin-top: 10%;
+}
+.aqua {
+    background-color: #44c5c7;
+}
+
+.yellow {
+    background-color: #eecf69;
+}
+
+.ligthorange {
+    background-color: #eb7f5c;
+}
+
+.ligthgreen {
+    background-color: #6bd3a5;
+}
+
+.lightblue {
+    background-color: #72b9d7;
+}
+
+.ligthwhite {
+    background-color: #ffffff;
+}
+
+#block{
+    padding: 30%;
+}
+#firstblock{
+    padding: 40%;
+}
+
+#secondBlock{
+    padding:55%;
+}
+
+#thirdblock{
+    padding:50%;
+}
+
+#fourthblock{
+    padding:15%;
+}
+#fifthblock{
+    padding:4%;
+}
+
+#sixthBlock{
+    padding:15%;
+}
+
+#sevenblock{
+    padding:60%;
+    padding-top: 75%;
+}
+
+#eightblock{
+       padding:39%;
+}
+#lastblock{
+   padding:417%; 
+}
+
+
+.martopboth{
+    padding-top: 9%;
+}
+#bigwhite{
+     padding:60%;
+    padding-top: 40%;
+}
+@media(max-width:1000px) {
+    .container-fluid,
+    {
+        width: 100%;
+        font-size: 30px;
+    }
+}

@@ -63,4 +63,4 @@ var timer = setInterval(function () {
         }
     }
     
-}, 2000);
+}, 1000);

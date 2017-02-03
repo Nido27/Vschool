@@ -1,0 +1,51 @@
+body {
+    text-align: center;
+    font-size: 30px;
+    background-image: url(160510150624-printing-money-100-dollar-bills-780x439.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 1000px;
+}
+#click{
+    color: greenyellow;
+    font-size:20px;
+}
+#output {
+    color: red;
+    background-color: khaki;
+    text-align: center;    
+}
+.padclass{
+    padding: 50px;
+}
+#input {
+    color: blue;
+    background-color: khaki;
+    text-align: center;
+     font-size: 30px;
+}
+
+#option {
+    color: yellow;
+    text-align: center;
+    font-size: 30px;
+    background-color: darkblue;
+}
+
+.overall {
+    margin-top: 400px;
+    border: 5px solid beige;
+    font-size: 30px;
+    padding: 100px !important;
+    background-color: darkgray;
+}
+
+@media(max-width:1000px) {
+    .container-fluid,
+    #output,
+    #input,
+    #option {
+        width: 100%;
+        font-size: 30px;
+    }
+}
