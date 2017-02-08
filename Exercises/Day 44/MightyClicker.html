@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+   <div class="container-fluid" ng-app="MyApp" ng-controller="mainCtrl">
+   <div class="row">
+       <div class="col-md-3 col-md-offset-1">
+           <button ng-click="redAction()" class="btn btn-danger">Red</button>
+           <p ng-model="redScore">Score : {{redScore}}</p>
+       </div>
+       <div class="col-md-3">
+            
+       </div>
+       <div class="col-md-3">
+           <button ng-click="blueAction()" class="btn btn-primary">Blue</button>
+           <p ng-model="blueScore"> Score : {{blueScore}}</p>
+       </div>
+   </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
+   
+    <script src="MightyClicker.js"></script>
+</body>
+
+</html>
