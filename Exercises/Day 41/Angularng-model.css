@@ -1,0 +1,27 @@
+.txt{
+    color: red;
+     font-size: 40px;
+}
+
+.fname{
+    background-color: darkred;
+    color: yellow;
+    font-size: 20px;
+    margin-left: 100px;
+}
+.mname{
+     background-color: darkblue;
+    color: greenyellow;
+    font-size: 20px;
+    margin-left: 30px;
+}
+
+.lname{
+     background-color: darkgoldenrod;
+    color: navy;
+    font-size: 20px;
+    margin-left: 30px;
+}
+body{
+    background-color: black;
+}

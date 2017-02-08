@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href="ExerciseAngularNameBadge.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+
+<body ng-app="app">
+    <div class="container backclr" ng-controller="mainCtrl">
+        <div class="row input">
+            <div class="col-md-6 pad">
+                <input ng-model="Fristname" placeholder="Fristname" class="form-control">
+            </div>
+            <div class="col-md-6 pad">
+                <input ng-model="Lastname" placeholder="Lastname" class="form-control">
+            </div>
+            <div class="col-md-6 pad">
+                <input ng-model="Email" placeholder="Email" class="form-control">
+            </div>
+            <div class="col-md-6 pad">
+                <input ng-model="Palcebirth" placeholder="Palcebirth" class="form-control">
+            </div>
+            <div class="col-md-6 pad">
+                <input ng-model="phone" type="number" placeholder="phone" class="form-control">
+            </div>
+            <div class="col-md-6 pad">
+                <input ng-model="favoriteFood" placeholder="favoriteFood" class="form-control">
+            </div>
+            <div class="col-md-12 pad">
+                <textarea ng-model="textarea" placeholder="tell us about yourself" class="form-control"></textarea>
+            </div>
+            <div class="col-md-7 col-md-offset-2 ">
+                <button class="submit">submit</button>
+            </div>
+        </div>
+    </div>
+    <div class="container" ng-controller="Ctrl">
+        <div class="row">
+            <div class="badge">badge</div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
+    <script src="Angularng-model.js"></script>
+</body>

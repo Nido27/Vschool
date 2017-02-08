@@ -1,0 +1,16 @@
+  body {
+   text-align: center;
+   display: block;
+   font-weight: bolder;
+   background-color: powderblue;
+}
+.one {
+   text-align: left;
+   border: 7px;
+   border-style:solid;
+   border-color: black;
+}
+img{
+    width:20%;
+    height: 10%;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>Document</title>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+   <link href="style.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<div class="container" ng-app="MyApp">
+
+   <div ng-controller="mainController">
+       <label> title </label><br>
+       <input ng-model="first" type="text" placeholder="Name"><br>
+       <label> description </label><br>
+       <input ng-model="description" type="text" placeholder="description why it is ugly"><br>
+       <label> Url image </label><br>
+      <div><input ng-model="picture" placeholder="url">
+      </div> 
+       <button ng-click="submit()">Details</button>
+
+       <div class="one" ng-if="submitted" ng-repeat="person in arr">
+        
+           NAME: {{person.first}}<br>
+           Description: {{person.description}}<br>
+         <img ng-src="{{person.image}}">
+       </div>
+   </div>
+</div>
+<script src="https://code.angularjs.org/1.6.1/angular.min.js"></script>
+       <script type="text/javascript">
+     var app = angular.module('MyChildApp', [])
+     app.controller('MyChildController', function ($scope, $window) {
+     $scope.Name = $window.Name;
+     });
+     </script>
+   <script src="script.js"></script>
+</body>
+</html>
+

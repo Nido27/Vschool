@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <div ng-app="app">
+        <div ng-controller="mainController">
+            <div ng-repeat="kill in player.kills">
+                <div class="player">
+                    <h1 class="handler">Handler : {{kill.handle}}</h1>
+                    <p class="rank">Rank : {{kill.rank}}</p>
+                    <p class="clan">Clan :</p>
+                    <div ng-repeat="clanName in kill.clan">
+                        <p class="clan">{{clanName}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="https://code.angularjs.org/1.6.1/angular.min.js"></script>
+    <script src="Angular Setup-ng-repeat.js"></script>
+</body>
+
+</html>

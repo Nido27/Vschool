@@ -1,0 +1,19 @@
+.submit{
+    margin-left: 70px;
+    margin-top: 10px;
+}
+
+.input{
+    text-align: center;
+    padding: 30px;
+    border: 2px black solid;
+}
+
+.pad{
+    padding: 20px;
+}
+
+
+.backclr{
+    background-color: beige;
+}

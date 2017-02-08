@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <div ng-app="myApp">
+        <div ng-controller="myCtrl">
+            <div ng-repeat="item in storage.list">
+                <p>Name : {{item.name}}</p>
+                <p>age : {{item.age}}</p>
+                <ul ng-repeat="x in storage.killed">
+                    <li>{{x}}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.angularjs.org/1.6.1/angular.min.js"></script>
+    <script src="script2.js"></script>
+</body>
+
+</html>
