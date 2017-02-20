@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="ExerciseHitList.CSS">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+
+<body ng-app="myApp" ng-controller="myCtrl" ng-init="loadData()">
+   <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html"><img alt="Brand" src="http://movies.mxdwn.com/wp-content/uploads/2014/10/9a887d75fed2ffb7b641dbf85b3bffd9.png" class="imgnav"></a>
+                <a class="navbar-brand navTitle" >Don Corleone's hit list</a>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div ng-repeat="todoItem in todoItems">
+                    <div class="col-md-4" ng-model="todoItem">
+                        <div class="col-md-12">
+                        <img src="{{todoItem.image}}" width="252px" height="200px"> 
+                        <div class="title">{{todoItem.name}}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
+    <script src="ExerciseHitList.js"></script>
+</body>
+
+</html>

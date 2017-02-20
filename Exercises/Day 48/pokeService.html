@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>pokeService</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Anton|Bree+Serif|Caveat+Brush" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="pokeService.css">
+</head>
+
+<body ng-app="myApp" ng-controller="myCtrl">
+   
+    <div class="container-fluid">
+      <div class="row">
+      <div class="col-md-4 col-md-offset-4">
+          <div class="title">Poke Service</div>
+      </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4 add frow">
+                <input ng-model="input">
+                <button ng-click="add(pokeadd)" class="btn btn-success">Add</button>
+                <button ng-click="remove(pokeremove)" class="btn btn-danger">Remove</button>
+            </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2 col-md-offset-5">
+                    <p ng-repeat="x in display">{{x}}</p>
+                </div>
+            
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
+    <script src="pokeService.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+body {
+    background-image: url(back-to-school-paper-colored-paper-stationery-159519.jpeg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.frow {
+    background-color: rgba(4, 1, 10, 0.5);
+    border: white solid 2px;
+    margin-top: 3%;
+    padding: 0.2%;
+    text-align: center;
+    margin-bottom: 1%;
+}
+
+p {
+    margin-top: 2%;
+    color: yellow;
+    background-color: rgba(251, 6, 53, 0.5);
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Bree Serif', serif;
+    border: 2px white dotted;
+}
+
+.title{
+    margin-top: 0.5%;
+    color: wheat;
+    font-size: 50px;
+    background-color: rgba(11, 185, 212, 0.5);
+    text-align: center;
+    font-family: 'Anton', sans-serif;
+}
+
+input,
+button {
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Caveat Brush', cursive;
+    color: red;
+}
