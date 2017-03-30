@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>shop</title>
+</head>
+<body ng-app="myNewApp" ng-controller="myController">
+  <input ng-model="letter">
+  <input ng-model="number" type="number">
+   <ul ng-repeat="item in list | search : letter :number">
+   <li>{{item.name}}</li>
+   </ul>
+    <script src="https://code.angularjs.org/1.6.2/angular.min.js"></script>
+    <script src="filter.js"></script>
+
+</body>
+</html>

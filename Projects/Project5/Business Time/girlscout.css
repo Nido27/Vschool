@@ -1,0 +1,46 @@
+body {
+    background-image: url(Image/Background/wood_gloomy_light_pass_path_track_dark_blue_fog_exit_53925_3840x2400.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 900px;
+}
+
+.navbar{
+    font-family: 'Russo One', sans-serif;
+}
+.title {
+    text-align: center;
+    font-size: 60px;
+    font-family: 'Amiri', serif;
+    background-color: #080A52;
+    color: whitesmoke;
+    margin-bottom: 3%;
+    border-radius: 50%;
+}
+
+.textTitle {
+    font-size: 30px;
+    font-family: 'Amiri', serif;
+    color: aqua;
+    background-color: darkcyan;
+    padding: 3%;
+}
+p {
+    text-align: right;
+    font-family: 'Scheherazade', serif;
+    font-style: italic;
+    font-size: 30px;
+    background-color: darkcyan;
+    color: wheat;
+}
+
+
+#kaws{
+    margin-top: 50px;
+}
+#browncub{
+    margin-top: 300px;
+}
+#handcub{
+    margin-top: 300px;
+}

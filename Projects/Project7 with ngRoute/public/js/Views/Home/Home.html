@@ -1,0 +1,117 @@
+<div class="row">
+    <div class="col-md-10 col-md-offset-2">
+        <h1 class="HomeTitle"> Welcome to Scout Blog</h1>
+    </div>
+    <div class="col-md-7 col-md-offset-3 homeTxtShare">
+        <p>You can share your favorites moments at Scout with all.</p>
+        <p>to let all the people know more about our amazing Activites at Your Troops .</p>
+        <p>and this website is opened for all people .</p>
+    </div>
+    <!--    ng-if="!showStatus"-->
+    <div class="col-md-2 col-md-offset-6">
+        <button ng-click="addStatus()" class="btn btn-warning inputPublishBtn"><a href="#/addPost" id="btn-warning"> Add Blog</a></button>
+    </div>
+</div>
+<div class="row" ng-init="loadData()">
+    <div class="col-md-10 col-md-offset-1">
+        <!-- status -->
+        <div ng-repeat="item in timeLine  | orderBy :sort :true">
+            <div class="row PostStatus">
+                <div class="row">
+                    <div class="col-md-8" ng-if="!item.isShowingEdit">
+                        <div class="col-md-12 col-md-offset-1">
+                            <a href="#/onePost/{{item._id}}" >
+                                <p class="titleTxtStyle">{{item.title}}</p>
+                            </a>
+                        </div>
+                        <div class="col-md-12 col-md-offset-3">
+                            <img ng-src="{{item.image}}" class="postImg img-responsive" >
+                        </div>
+                        <div class="col-md-8 col-md-offset-1">
+                            <p class="descTxtStyle">{{item.description}}</p>
+                        </div>
+                    </div>
+                    <div class="col-md-1 col-md-offset-3" ng-if="!item.isShowingEdit">
+                        <!--Delete Part-->
+                        <button ng-click="deleteItem(item._id)" class="btn btn-danger" title="Remove">X</button>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-10 col-md-offset-1">
+                            <div ng-if="item.isShowingEdit">
+                                <div class="col-md-1 col-md-offset-12">
+                                    <!--Delete Part-->
+                                    <button ng-click="deleteItem(item._id)" class="btn btn-danger" title="Remove">X</button>
+                                </div>
+                                <input ng-model="item.title" class="form-control titleTxtEditStyle">
+                                <input ng-model="item.image" class="form-control titleTxtEditStyle">
+                                <textarea ng-model="item.description" class="form-control descTxtEditStyle"></textarea>
+                                <div class="col-md-8 col-md-offset-11">
+                                    <button ng-click="edit(item._id);" class="glyphicon glyphicon-pencil btn btn-success editPostBtn"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-md-5 col-md-offset-9">
+                        <div class="col-md-4">
+                            <!--like button-->
+                            <div class="button-area">
+                                <label class="likeTxtStyle">{{item.upVoted}}</label>
+                                <button class="btn btn-danger glyphicon glyphicon-thumbs-up" ng-click="like(item._id)" title="Like"></button>
+                            </div>
+                        </div>
+                        <div class="col-md-5 col-md-pull-1">
+                            <!--unlike button-->
+                            <div class="button-area">
+                                <label class="likeTxtStyle">{{item.downVoted}}</label>
+                                <button class="btn btn-danger glyphicon glyphicon-thumbs-down" ng-click="unlike(item._id)" title="unLike"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row btnPostion">
+                    <div class="col-md-2 col-md-offset-1">
+                        <!--add a comment -->
+                        <button ng-click="showHideAddComment(item._id)" class="btn btn-warning" title="Add">Add Comment</button>
+                    </div>
+                    <div class="col-md-2 col-md-offset-1">
+                        <!--edit part-->
+                        <button ng-click="editStatus(item._id)" class="btn btn-warning" title="Edit">Edit Truth</button>
+                    </div>
+                    <div class="col-md-2">
+                        <!--  show Comments-->
+                        <button ng-click="showHideComment(item._id)" class="btn btn-warning" title="Show">Show Comment</button>
+                    </div>
+                </div>
+                <!--add Comment part-->
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-1">
+                        <div ng-if="item.isShowingAddComment">
+                            <textarea ng-model="commentTxt" placeholder="Enter a Comment" class="form-control CommentBox" placeholder="Enter a Comment"></textarea>
+                            <div class="col-md-9 col-md-offset-11">
+                                <button ng-click="addComment(item._id, commentTxt);showHideAddComment()" class="glyphicon glyphicon-plus btn btn-warning AddCommentBt" title="Add"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Show Comment Part -->
+                <div class="row">
+                    <div class="col-md-12 col-md-offset-1">
+                        <div ng-repeat="comment in item.Comment track by $index">
+                            <div ng-if="item.isShowingComment">
+                                <div class="col-md-8 CommentStyle">
+                                    <p>{{comment}}</p>
+                                </div>
+                                <div class="col-md-2 col-md-pull-1">
+                                    <button ng-click="removeComment(item._id, $index)" class="glyphicon glyphicon-trash btn btn-danger deleteCommentBtn" title="Remove"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,99 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link 
+          rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+          crossorigin="anonymous">
+    <link 
+          href="https://fonts.googleapis.com/css?family=Anton|Fjalla+One|Indie+Flower" 
+          rel="stylesheet" 
+          type='text/css'>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+          <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="true" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Pokemon</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse in" aria-expanded="true">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li class="active"><a href="./">Default <span class="sr-only">(current)</span></a></li>
+              <li><a href="../navbar-static-top/">Kill</a></li>
+              <li><a href="../navbar-fixed-top/">Layal</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+    <div class="countiner-fluid">
+        <div class="row">
+            <div class="col-xs-12 col-md-12 ">
+                <div class="col-xs-6 col-md-6 col-md-offset-3 title">
+                <p><b> Pokemon Collector </b></p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-md-12 col-md-offset-1 ">
+                    <div class="col-xs-3 col-md-3  pik">
+                        <img src="image/Pikachu.gif" width="100%" >
+                        <label class="labelName" ><b> Pikachu </b></label>
+                        <input type="number"min="0" id="Pik" class="result form-control"  >
+                        <input type="text" id="pikRes" disabled class="result form-control" >
+                </div>
+                <div class="col-xs-3 col-md-3 char">
+                        <img src="image/Charmander.gif"width="100%" >
+                        <label class="labelName" ><b>Charmander</b></label>
+                        <input  type="number" min="0"id="Char" class="result form-control" >
+                        <input type="text" id="charRes" disabled class="result form-control"  >
+                </div>
+                <div class="col-xs-3 col-md-3 Bul">
+                    <img src="image/Bulbasaur.gif"width="100%" >
+                    <label class="labelName"><b> Bulbasaur</b></label>
+                    <input type="number"min="0" id="Bul" class="result form-control"  >
+                    <input type="text" id="bulRes" class="result form-control" disabled >
+                    </div>
+                
+            </div>
+        </div>
+            <div class="row">
+                <div class="col-xs-12 col-md-12 total"> 
+                    <div class="col-md-4 col-md-offset-4">
+                        <div>
+                            <label ><b>Total!!!</b> </label>
+                        </div>
+                            <div>
+                                <input type="text" id="addRes" disabled class="total form-control">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <div class="row">
+            <div class="col-xs-12 col-md-12 total">
+                <footer>
+                    &copy; &nbsp;P.K. Box 942872323 California, CA 43573-0001 &nbsp;&rarr;&nbsp;www.Pokemon.com &nbsp;&rarr;&nbsp;Pokemon@gmail.com
+                </footer>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+            crossorigin="anonymous">
+    </script>
+    <script type="text/javascript" language="javascript" src="script.js">
+    </script>
+</body>
+</html>

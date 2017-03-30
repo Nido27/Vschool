@@ -1,0 +1,52 @@
+body{
+    background-image: url(Image/Background/mysterious-scary-forest-pacific-northwest-halloween-holiday-1050x1400_zps7af9b74a.jpg);
+   background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 700px;
+}
+
+.navbar{
+    font-family: 'Russo One', sans-serif;
+}
+
+.title {
+    text-align: center;
+    font-size: 60px;
+  font-family: 'Amiri', serif;
+    background-color: #730008;
+    color: whitesmoke;
+    margin-bottom: 3%;
+    border-radius: 50%;
+}
+
+
+.textTitle {
+    font-size: 30px;
+    font-family: 'Amiri', serif;
+    color: darkred;
+    background-color: lemonchiffon;
+    padding: 3%;
+}
+p {
+    text-align: right;
+    font-family: 'Scheherazade', serif;
+    font-style: italic;
+    font-size: 30px;
+    background-color: lavenderblush;
+    color: darkslateblue;
+    padding: 2%;
+}
+
+
+#runRover{
+    margin-top: 100px;
+}
+#coupleRover{
+    margin-top: 300px;
+}
+#bombaRover{
+    margin-top: 400px;
+}
+#brownRover{
+    margin-top: 400px;
+}

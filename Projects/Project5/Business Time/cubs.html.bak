@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="Cubs.css">
+    <link href="https://fonts.googleapis.com/css?family=Acme|Alfa+Slab+One|Aref+Ruqaa|BenchNine|Cardo|Exo|Francois+One|Patua+One|Philosopher|Russo+One" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html"><img alt="Brand" src="Image/logo.gif" width="40px"></a>
+                <a class="navbar-brand" href="index.html">Makassed Islamic Scout - Beirut Legation </a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <form class="navbar-form navbar-left">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+                <ul class="nav navbar-nav  navbar-right">
+                    <li><a href="Registration.html">Registration</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">More <span class="caret"></span></a>
+                        <ul class="dropdown-menu" id="dropdown">
+                            <li><a href="AboutMakassed.html">AboutMakassed </a></li>
+                            <li><a href="LordBadenPowell.html">Lord Baden Powell</a></li>
+                            <li><a href="Pictures.html">Pictures</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li class="dropdown-header">Nav header</li>
+                            <li><a href="#">Separated link</a></li>
+                            <li><a href="#">One more separated link</a></li>-->
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div class=" col-md-6 col-md-offset-3 title">Cubs</div>
+        </div>
+        <div class="row">
+
+
+
+            
+        
+    </div>
+        <div class="row">
+            <div class=" col-md-6">
+                <label class="textTitle">Who are Cubs ?</label>
+                <p>For Cubs, excitement and adventure are key. Their programme offers a huge variety of activities surrounding areas of fitness, global and beliefs; whilst allowing them to be creative and get involved in their local communities. Cubs are introduced to exciting outdoor skills and take part in adventurous activities, as well as camps and residential experiences. </p>
+                <p>he Cub Pack is the second section of the Scout Group following on from Beavers. Cub Scouts are young people aged between 8 and 10 ½. There is core flexibility in the age range: young people can join from age 7½ and can move to Scouts between age 10 and 11. It may sometimes be appropriate to extend this flexibility for young people with additional needs</p>
+                <label class="textTitle">Activities</label>
+                <p>During their time in the Pack, Cub Scouts will get a chance to try a wide range of different activities as well as going on trips, days out, and on camps. Participation and personal development, rather than meeting set standards, is the key approach, and there are a range of badges and challenge awards that Cub Scouts can gain to recognise their achievements. </p>
+                <label class="textTitle">For Hindus and Buddhists</label>
+                <p>I promise that I will do my best to do my duty to my Dharma and to the Queen, to help other people and to keep the Cub Scout Law.</p>
+                <label class="textTitle"> Atheists and those with no defined faith</label>
+                <p>I promise that I will do my best to uphold our Scout values, to do my duty to the Queen, to help other people and to keep the Cub Scout Law.
+                </p>
+                <label class="textTitle">The Cub Scout Law:</label>
+                <p>Cub Scouts always do their best Think of others before themselves And do a good turn every day.</p>
+
+            </div>
+            <div class="col-md-6">
+                <label class="textTitle">Structure</label>
+                <p>A Cub Pack is usually organised into small groups called Sixes, each headed up by an older Cub called a Sixer, and often with a Seconder as well. Sixes can be used in a number of ways to facilitate the organisation of the Cub Scout Pack. They may provide a ‘home’ area for Cub Scouts to gather at points at the start, during or at the end of the Pack meeting.</p>
+                <label class="textTitle">The Cub Scout Promise</label>
+                <p>There are a number of variations of the Cub Scout Promise to reflect the range of faiths, beliefs and attitudes, and nationalities, in the UK within Scouting. </p>
+                <label class="textTitle">For Muslims</label>
+                <p>I promise that I will do my best to do my duty to Allah and to the Queen, to help other people and to keep the Cub Scout Law.</p>
+                <label class="textTitle">For Christians, Jews and Sikhs</label>
+                <p>I promise that I will do my best to do my duty to God and to the Queen, to help other people and to keep the Cub Scout Law.</p>
+                <p>For subjects of independent Commonwealth countries, foreign nationals and individuals who are stateless, the following wording can replace ‘duty to the Queen’</p>
+                <p>…to do my duty to the country in which I am now living.</p>
+                <label class="textTitle">The Cub Scout Motto:</label>
+                <p>Be Prepared</p>
+                <label class="textTitle">Flag</label>
+                <p>The Cub Scout flag is yellow, bearing the Scout symbol and motto.</p>
+                <label class="textTitle">Uniform</label>
+                <p>Cubs may wear a dark blue sweatshirt with a Group scarf (often called a necker) and a woggle in the colour of their Six.</p>
+            </div>
+        </div>
+    </div>
+    <script src="https://use.fontawesome.com/d266474e8d.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html

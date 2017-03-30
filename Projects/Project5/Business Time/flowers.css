@@ -1,0 +1,51 @@
+body{
+    background-image: url(Image/Background/wood-wallpaper-hd-11.jpg);
+     background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 900px;
+}
+
+.navbar{
+    font-family: 'Russo One', sans-serif;
+}
+.title{
+  text-align: center;
+    font-size: 80px;
+    font-family: 'Aref Ruqaa', serif;
+    background-color: whitesmoke;
+    color: palevioletred;
+    margin-bottom: 3%;
+    border-radius: 50%;
+    padding: 20px;
+    
+}
+.ftitle{
+    text-align: center;
+}
+
+
+.textTitle {
+    font-size: 30px;
+    font-family: 'Amiri', serif;
+    color: deeppink;
+    background-color: lightpink;
+    padding: 5%;
+}
+p {
+    text-align: right;
+    font-family: 'Scheherazade', serif;
+    font-style: italic;
+    font-size: 20px;
+    background-color: lightgoldenrodyellow;
+    color: black;
+    padding: 2%;
+}
+#flagflower{
+    margin-top: 10px;
+}
+#coupleflower{
+    margin-top: 300px;
+}
+#groupflower{
+    margin-top: 300px;
+}

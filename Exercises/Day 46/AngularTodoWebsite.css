@@ -1,0 +1,31 @@
+.addrow1{
+     margin-top: 30px;
+    border: green solid 3px;
+    padding: 10px;
+    background-color: khaki;
+}
+.title{
+    font-size: 30px;
+    color: darkblue;
+    border: 2px yellow solid;
+    background-color: darkkhaki;
+    margin-top: 20px;
+}
+.row{
+    text-align: center;
+}
+.add{
+    border: darkblue solid 3px;
+    background-color: burlywood;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+body{
+    background-color: salmon;
+    color: darkred
+        ]\
+        
+        ;
+    font-size: 20px;
+}

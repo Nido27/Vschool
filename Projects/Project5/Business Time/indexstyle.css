@@ -1,0 +1,93 @@
+body {
+    background-image: url(https://image.freepik.com/free-vector/grey-linen-texture-background_1053-253.jpg) !important;
+     background-size: 100% 100%;
+    background-repeat: no-repeat;
+    
+}
+#dropdown{
+    background-color: lightcoral !important;
+    
+}
+
+.navbar{
+    font-family: 'Russo One', sans-serif;
+}
+footer {
+    background-color: dimgray;
+    font-size: 15px;
+    text-align: center;
+    color: wheat;
+    margin-top: 13%;
+}
+
+#cubs {
+    text-align: center;
+    color: yellow;
+    background-color: #B7C500;
+    font-size: 20px;
+}
+
+#flowers {
+    text-align: center;
+    color: deeppink;
+    background-color: darkmagenta;
+    font-size: 20px;
+}
+
+#boyScout {
+    text-align: center;
+    color: yellowgreen;
+    background-color:darkgreen;
+    font-size: 20px;
+}
+
+#girlScout {
+    text-align: center;
+    color: deepskyblue;
+    background-color:darkblue;
+    font-size: 20px;
+}
+
+#Rovers {
+    text-align: center;
+    color: red;
+    background-color:darkred;
+    font-size: 20px;
+}
+
+#Leaders {
+    text-align: center;
+    color: pink;
+    background-color:darkmagenta;
+    font-size: 20px;
+}
+
+.khat1 , .khat2{
+    margin-top: 5%;
+    
+}
+#Piccub{
+    border-radius: 10%;
+    border:5px solid #B7C500;
+}
+#Picflower{
+    border-radius: 10%;
+    border:5px solid pink;
+}
+#Picboyscout{
+    border-radius: 10%;
+    border:5px solid darkgreen;
+}
+#Picgirlscout{
+    border-radius: 10%;
+    border:5px solid darkblue;
+}
+#Picrover{
+    border-radius: 10%;
+    border:5px solid darkred;
+}
+#Picleader{
+    border-radius: 10%;
+    border:5px solid darkmagenta;
+}
+

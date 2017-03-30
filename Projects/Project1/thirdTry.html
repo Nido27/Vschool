@@ -1,0 +1,135 @@
+<html>
+<head>
+	<title> 4 function</title>
+	<link rel="stylesheet" type="text/css" href="thirdStyle.css"/>
+    <meta name="viewport" content="width=device-width" >
+
+
+</head>
+<body>
+        <div>
+                    <h1> 
+                            <p class="h1-class"> Pokemon Collector </p>
+                    </h1>
+        </div>
+                <aside>  
+                            <img src="image/photo.gif" width="100%">
+
+                </aside>
+
+    <table>     
+    
+            <tr>
+                    <td> 
+                            <label class="Pik" >
+                            <b> Pikachu </b>
+                            </label>
+                            
+                            <img src="image/Pikachu.gif" 
+                            width="35%" class="Pik">
+                        
+                    </td>
+                    <td>   
+                            
+                            <img src="image/Charmander.gif"     width="35%" class="char-pic">
+                            
+                            <label class="char">
+                                <b>Charmander</b>
+                            </label>
+                    </td>
+
+            </tr>
+            <tr> 
+                    <td > 
+                            <input type="number" id="num1" onClick="multiplyByP();addByPB(); addBy();" class="Pik" >
+                    </td>
+                    <td>
+                             <input type="number" id="num2" onClick=" multiplyByC(); addByCS(); addBy(); "  class="char">
+                    </td>
+            </tr>
+            <tr>
+                    <td >
+                            <input type="text" id="res1" disabled class="Pik">
+                    </td>
+                     <td>
+                            <input type="text" id="res2" disabled class="char">
+                    </td>
+                    
+             </tr>
+             <tr>
+                        
+                    <td>
+                            <label class="Bul" ><b> Bulbasaur</b></label>
+                            <img src="image/Bulbasaur.gif" width="35%">
+                    </td>
+                    <td>
+
+                            <img src="image/Squirtle.gif" width="30%" class="Squ-pic">
+                            <label class="Squ" ><b> Squirtle</b></label>
+                    </td>
+   
+            <tr>    
+                    <td> 
+                            <input type="number" id="num3" onClick="multiplyByB(); addByPB(); addBy(); "  class="Bul">
+                    </td>
+                    <td> 
+                            <input type="number" id="num4" onClick="multiplyByS(); addByCS();  addBy();"  class="Squ">
+                    </td>
+            </tr>
+            <tr>
+                     <td>
+                            <input type="text" id="res3" disabled class="Bul">
+                    </td>
+                    <td>
+                            <input type="text" id="res4" disabled class="Squ">
+                    </td>
+                    
+                 
+            </tr>
+            <tr>
+                   
+                 <td>  <!--Pika and Bul total-->
+                
+                            <label class="pikBulText" >
+                             <b>Pikachu &nbsp;Bulbasaur</b>
+                            </label>
+                </td>
+                <td>
+                           <label class="CharSquText" >
+                                <b>Charmander &nbsp; Squirtle</b>
+                        </label>
+                </td>    
+            </tr>
+            <tr>    
+                 <!-- char and Squ total -->
+                <td>
+                
+                        <input type="text" id="addPB" disabled class="pikBulOutput"> 
+                </td>
+                <td>
+                        <input type="text" id="addCS" disabled class="CharSquOutput"> 
+                            
+                </td>
+            </tr> 
+            <tr> <!--final total -->
+                       <td>
+                
+                            <label class="finaltotalText" >
+                             <b>Total &nbsp; !!!</b>
+                            
+                                <input type="number" id="addRes" disabled class="finaltotalOuput"> 
+                            </label>
+                      </td>
+                             
+            </tr>
+         
+          </table>
+                
+    
+            <footer>
+                &copy; &nbsp;P.K. Box 942872323 California, CA 43573-0001 &nbsp;&rarr;&nbsp;www.Pokemon.com &nbsp;&rarr;&nbsp;Pokemon@gmail.con 
+            </footer>
+                    <script type="text/javascript" language="javascript" src="thirdScript.js"></script>
+      
+</body>
+</html>

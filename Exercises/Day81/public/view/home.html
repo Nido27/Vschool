@@ -1,0 +1,34 @@
+<div class="container" ng-init="loadData()">
+    <div class="row text-center">
+        <div class="col-md-12">
+            <h1>My List</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <div class="row" ng-repeat="item in list track by $index">
+                <div class="col-md-12">
+                   <div ng-if="!item.isEdit">
+                       <div>{{item.name}}</div>
+                       <div>{{item.cost}}</div>
+                       <div>{{item.isDone}}</div>
+                       <button ng-click="remove(item._id)" class="btn btn-danger">Delete</button>
+                       <button ng-click="edit($index)" class="btn btn-success">Upddate</button>
+                   </div>
+                   <div ng-if="item.isEdit">
+                       <input class="form-control" placeholder="name" ng-model="item.name">
+                       <input class="form-control" placeholder="cost" ng-model="item.cost">
+                       <button ng-click="save(item._id, item)" class="btn btn-success">save</button>
+                   </div>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-12">
+                    <input type="text" placeholder="name" class="form-control" ng-model="userInput.name">
+                    <input type="number" placeholder="cost" class="form-control" ng-model="userInput.cost">
+                    <button ng-click="add()" class="btn btn-info">Add item</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

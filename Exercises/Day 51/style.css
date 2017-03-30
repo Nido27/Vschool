@@ -1,0 +1,23 @@
+body{
+    background-image: url(pokemon-pokemon-go-mobile-trends-smartphone-163042.jpeg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.input{
+    text-align: center;
+    margin-left: 7%;
+    font-size: 15px;
+}
+
+
+input{
+    text-align: center;
+    background-color: lightgreen;
+    color: darkblue;
+}
+
+.output{
+    color: red;
+    background-color: lightcyan;
+}

@@ -1,0 +1,29 @@
+body {
+    margin-top: 2%;
+}
+
+input {
+    text-align: center;
+    background-color: darkkhaki;
+    font-size: 15px;
+    color: darkmagenta;
+    margin-top: 2%;
+    margin-left: 8%;
+}
+
+.inputanswer {
+    background-color: darkseagreen;
+    color: darkblue;
+    margin-top: 4%;
+}
+
+button{
+    margin-top: 4%;
+    color: darkblue !important;
+    margin-left: 5%;
+}
+
+.border{
+    background-color: gainsboro;
+    border: dotted 2px black;
+}

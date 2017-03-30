@@ -1,0 +1,50 @@
+body {
+    background-image: url(Image/Background/dark-background-images-19.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 700px;
+}
+
+.navbar {
+    font-family: 'Russo One', sans-serif;
+}
+
+.title {
+    text-align: center;
+    font-size: 60px;
+    font-family: font-family: 'Amiri', serif;
+    background-color: #231379;
+    color: whitesmoke;
+    margin-bottom: 3%;
+    border-radius: 50%;
+}
+
+.textTitle {
+    font-size: 35px;
+    font-family: 'Amiri', serif;
+    color: darkblue;
+    background-color: lavender;
+    padding: 1%;
+}
+
+p {
+    text-align: right;
+    font-family: 'Scheherazade', serif;
+    font-style: italic;
+    font-size: 30px;
+    background-color: lightskyblue;
+    color: black;
+    padding: 1%;
+}
+
+#leaderaboresh {
+    margin-top: 100px;
+}
+
+#greatLeader {
+    margin-top: 500px;
+}
+
+#jaballeader {
+    margin-top: 500px;
+}

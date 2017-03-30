@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>shop</title>
+</head>
+<body ng-app="myNewApp" ng-controller="myController">
+   <h1>Welcome to our shop</h1>
+    <p> what would you like to buy</p>
+    <input ng-model="name" type="text" placeholder="Name of item">
+    <input ng-model="amount" type="number" placeholder="amount of sell">
+    <input ng-model="price" type="number" placeholder="price of item">
+    {{name}}
+    {{amount}}
+    {{price}}
+    <button ng-click="addShopItem()">Add</button>
+    <div ng-repeat="item in shopItems">
+        <item-in-shop name="item.name" amount="item.amount" price="item.price" currency="$"></item-in-shop>
+    </div>
+    <script src="https://code.angularjs.org/1.6.2/angular.min.js"></script>
+    <script src="app.js"></script>
+    <script src="Js/directive/Shop/shopitem.js"></script>
+</body>
+</html>

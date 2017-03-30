@@ -1,0 +1,27 @@
+body {
+    background-image: url(https://static.pexels.com/photos/5412/water-blue-ocean.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  
+}
+.navTitle{
+    color: red !important;
+}
+.title {
+    position: relative;
+    bottom: 38px;
+    color: white;
+    background-color: rgba(0, 0, 255, 0.5);
+    padding: 5px;
+    font-size: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.imgnav{
+    position: relative;
+    bottom: 16px;
+    right: 20px;
+    width: 90px
+}

@@ -1,0 +1,126 @@
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+    height: 100%;
+}
+
+body {
+    background-image: url(/image/pexels-photo.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+/*
+.removeBtnEdit{
+    position: relative !important;
+    right: 25% !important;
+}
+*/
+
+.titleStyle {
+    font-size: 70px;
+    color: #0D157F;
+    /*    background-color: rgba(76, 81, 100, 0.5);*/
+    font-family: 'Rubik Mono One', sans-serif;
+    padding: 2%;
+    margin-top: 2%;
+    text-shadow: 0 0 30px #01D6EA;
+}
+
+button {
+    font-family: 'Baloo Bhaina', cursive;
+    font-size: 40px;
+}
+
+.inputShowBtn {
+    margin-bottom: 5%;
+    padding: 2%;
+    font-size: 22px;
+}
+
+.addInputTit,
+.addInputDesc {
+    font-family: 'Sansita', sans-serif;
+    color: white;
+    font-size: 22px;
+    background-color: rgba(0, 255, 255, 0.2);
+    padding: 2%;
+    margin-bottom: 1%;
+}
+
+.addBtnStyle {
+    font-family: 'Baloo Bhaina', cursive;
+}
+
+.titleTxtStyle {
+    color: lightskyblue;
+    font-size: 30px;
+    font-family: 'Baloo Bhaina', cursive;
+    padding: 2%;
+}
+
+.descTxtStyle {
+    color: azure;
+    font-size: 25px;
+    font-family: 'Sansita', sans-serif;
+    padding: 2%;
+    margin-left:4%;
+}
+
+.likeTxtStyle {
+    color: aliceblue;
+    font-family: 'Ranga', cursive;
+    font-size: 18px;
+    padding: 2%;
+}
+
+.titleTxtEditStyle,
+.descTxtEditStyle {
+    font-family: 'Fjalla One', sans-serif;
+    color: seashell;
+    background-color: rgba(0, 255, 255, 0.2);
+    padding: 3%;
+    margin-bottom: 2%;
+    font-size: 22px;
+}
+
+.CommentStyle {
+    font-family: 'Baloo Bhaina', cursive;
+    color: navajowhite;
+    font-size: 18px;
+}
+
+.PostStatus {
+    background-color: rgba(76, 81, 100, 0.5);
+    margin: 2%;
+}
+
+.btnPostion {
+    margin-bottom: 2%;
+}
+
+.CommentBox {
+    color: aliceblue;
+    font-size: 15px;
+    background-color: rgba(0, 255, 255, 0.2);
+    padding:2%;
+    margin-left: 2%;
+    font-family: 'Baloo Bhaina', cursive;
+    margin-bottom: 2%;
+}
+
+.AddCommentBt,.editPostBtn,.deleteCommentBtn{
+    margin-bottom: 5%;
+}
+
+
+/*
+font-family: 'Baloo Bhaina', cursive;
+font-family: 'Griffy', cursive;
+font-family: 'Ranga', cursive;
+font-family: 'Rubik Mono One', sans-serif;
+font-family: 'Sansita', sans-serif;
+font-family: 'Fjalla One', sans-serif;*/

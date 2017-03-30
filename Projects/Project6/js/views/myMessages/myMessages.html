@@ -1,0 +1,32 @@
+<div class="row" ng-init="loadData()">
+    <div class="col-md-8">
+        <div ng-repeat="comment in list" class="displaymess row">
+            <div class="col-md-11">{{comment.description}}</div>
+            <div class="col-md-1">
+                <button class="btn btn-danger glyphicon glyphicon-remove buttonx" ng-click="delete(comment._id)"></button>
+            </div>
+        </div>
+
+    </div>
+    <div class="col-md-3 idpic">
+        <img src="/image/id%20card.jpg" width="100%">
+        <div clas="row">
+            <div class="col-md-12">
+                <p class="idText ">Nader El Salhat</p>
+            </div>
+        </div>
+        <div clas="row">
+            <div class="col-md-4 col-md-offset-1">
+                <a href="#/Home" class="links">Home</a>
+            </div>
+            <div class="col-md-5 col-md-offset-1">
+                <a href="#/Candidness" class="links">Candidness</a>
+            </div>
+        </div>
+        <div clas="row">
+            <div class="col-md-7 col-md-offset-3 count">
+                <p>Message Number : {{NumberofMessage}}</p>
+            </div>
+        </div>
+    </div>
+</div>

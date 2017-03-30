@@ -1,0 +1,52 @@
+body{
+    background-image: url(Image/Background/priroda_les_tropa_svet_2560x1900.jpg);
+     background-size: 100% 100%;
+    background-repeat: no-repeat;
+   
+}
+.navbar{
+    font-family: 'Russo One', sans-serif;
+}
+#dropdown{
+    background-color: lightcoral !important;
+}
+.title {
+    text-align: center;
+    font-size: 80px;
+    font-family: 'Amiri', serif;
+    background-color: #B7C500;
+    color: whitesmoke;
+    margin-bottom: 2%;
+    border-radius: 50%;
+}
+
+
+label{
+    font-size: 50px;
+}
+
+.textTitle {
+    font-size: 30px;
+    font-family: 'Amiri', serif;
+    color: yellow;
+    background-color: darkkhaki;
+    padding: 3%;
+}
+p {
+    text-align: right;
+    font-family: 'Scheherazade', serif;
+    font-style: italic;
+    font-size: 30px;
+    background-color: darkkhaki;
+    color: black;
+}
+
+#kaws{
+    margin-top: 100px;
+}
+#browncub{
+    margin-top: 300px;
+}
+#handcub{
+    margin-top: 300px;
+}

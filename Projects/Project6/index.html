@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Anton|Caveat+Brush|Francois+One|Indie+Flower|Lobster|Pacifico|Pangolin|Sansita|Titillium+Web" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body ng-app="app">
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">
+                <img alt="Brand" src="image/Harwen-Pleasant-E-mail.ico" width="70px"></a>
+                <a href="#/Home" class="homeStyle">Home</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#/myMessages">myMessages</a></li>
+                    <li><a href="#/Candidness">Candidness</a></li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div ng-view></div>
+    </div>
+
+    <script src="https://code.angularjs.org/1.6.2/angular.min.js"></script>
+    <script src="https://code.angularjs.org/1.6.2/angular-route.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/service/apiService.js"></script>
+    <script src="js/views/Candidness/Candidness.js"></script>
+    <script src="js/views/Home/Home.js"></script>
+    <script src="js/views/myMessages/myMessages.js"></script>
+</body>
+
+</html>

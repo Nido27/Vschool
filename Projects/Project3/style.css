@@ -1,0 +1,78 @@
+@media(max-width:700px){
+    .Pik, .char, .Bul, .total,.result,.labelName,.title{
+        width: 100%;
+        font-size: 10px;
+    }
+}
+
+
+.title
+    {text-align:center; 
+     color:yellow;
+     font-size:50px;
+     transition: "background-color 2s ease";
+     font-family:"'Indie Flower', cursive";
+}
+
+*{
+    margin: auto;
+    padding: auto;
+}
+
+head , body{
+    width: 100%;
+    background-image :url(image/background.jpg);
+}
+
+.total
+    {color:red;
+     font-size: 40px;
+     font-family: "'Fjalla One', sans-serif";
+     text-align:center;
+}
+
+.result
+    { text-align:center;
+     font-size:30px;
+    }
+
+footer
+{
+    text-align:center;
+     background-color: grey;
+     color: whitesmoke;
+     font-size: 15px;
+     margin-top: 88px;
+    
+}
+.labelName
+    { text-align:center;
+    font-size:15px;
+    }
+
+.photo{
+    text-align:center;
+}
+
+
+.Pik, .char, .Bul{
+    font-size: 22px;
+    text-align: center;
+    padding: 15px;
+    margin:0.5%;
+    border-radius:10%;
+}
+
+.Pik{
+    color:#877800;
+    background-color:yellow;
+}
+.char{
+    color:#B13E00;
+    background-color:orange;
+}
+.Bul{
+    color:#1EAC00;
+    background-color:green;
+}
+

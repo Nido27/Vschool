@@ -1,0 +1,47 @@
+body {
+    background-image: url(Image/Background/47374029-dark-green-wallpaper.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 700px;
+}
+
+.navbar{
+    font-family: 'Russo One', sans-serif;
+}
+.title {
+    text-align: center;
+    font-size: 60px;
+     font-family: 'Amiri', serif;
+    background-color: #04764B;
+    color: whitesmoke;
+    margin-bottom: 3%;
+    border-radius: 50%;
+}
+
+
+.textTitle {
+    font-size: 30px;
+    font-family: 'Amiri', serif;
+    color: greenyellow;
+    background-color: darkolivegreen;
+    padding: 3%;
+}
+p {
+    text-align: right;
+    font-family: 'Scheherazade', serif;
+    font-style: italic;
+    font-size: 30px;
+    background-color: darkolivegreen;
+    color: wheat;
+}
+
+
+#smartboy{
+    margin-top: 100px;
+}
+#browncub{
+    margin-top: 300px;
+}
+#handcub{
+    margin-top: 300px;
+}

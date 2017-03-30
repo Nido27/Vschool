@@ -1,0 +1,128 @@
+
+*{
+    margin: auto;
+    padding: auto;
+}
+
+head ,body
+{
+    width: 100%;
+    height: 150px;
+    background-image: url(image/background.jpg);
+
+    
+}
+
+table
+{
+    margin-left: 5%;
+    padding: 3px 3px 0px 3px;
+}
+
+.h1-class{
+    text-align: center;
+    color: yellow;
+    font-size:170%;
+}
+
+.h1-class:hover{
+    color: red;
+}
+
+label{
+    font-size: 23px;
+    text-align: center;
+    
+}
+input{
+    font-size: 17px;
+    text-align: center;
+}
+.Pik{
+    
+    color:#D3B900;
+    text-align: center;
+}
+
+.char{
+    color:#AF2400;
+    margin-left:60%;
+}
+
+.char-pic
+{
+    margin-left:70%;
+}
+.Bul
+{
+    color: #007D36 ;
+}
+
+.Squ
+{
+    color:#096ECF;
+    margin-left:60%;
+}
+
+.Squ-pic
+{
+    margin-left:70%;
+}
+
+
+
+.pikBulText
+{
+    color: #CB0F68;
+    margin-left: 25%;
+    font-size: 20px; 
+}
+.pikBulOutput
+{
+    margin:2% 0% 0% 15%;
+    color:#A31300;
+    font-size: 20px;
+}
+.CharSquText
+{
+    color: #CB0F68  ;
+    margin-left:40%;
+    font-size: 20px; 
+}
+
+.CharSquOutput
+{
+    margin:2% 0% 0% 35%;
+    color:#A31300;
+    font-size: 20px;
+}
+.finaltotalText
+{
+    color: #FB001D;
+    margin-left: 95%;
+    font-size: 30px;
+}
+.finaltotalOuput
+{
+    margin-left:77%;
+    color:#FB001D;
+    font-size: 20px;
+}
+
+aside {
+        float: right;
+}
+footer
+{
+    text-align: center;
+    background-color: grey;
+    color: whitesmoke;
+    width: 100%;
+    margin-top: 1%;
+    font-size: 15px;
+    
+}
+
+ @media (max-width: 500px) 
+ @media (min-width: 50px) 
+ 

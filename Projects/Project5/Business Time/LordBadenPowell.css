@@ -1,0 +1,105 @@
+.body {
+    background-image: url(Image/518084-background-hd.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+#dropdown {
+    background-color: lightcoral !important;
+}
+
+.navbar {
+    margin-bottom: 0 !important;
+    font-family: 'Russo One', sans-serif;
+}
+
+.titleBaden{
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Russo One', sans-serif;
+    background-color: lightcoral;
+    color: whitesmoke;
+    margin:2% 0% 3% 0% ;
+    border-radius: 50%;
+    padding: 1%;
+}
+
+.labeltable {
+    color: white;
+    background-color: gainsboro;
+    font-family: 'Patua One', cursive;
+    font-size: 20px;
+    text-align: center;
+    border: 1px solid black;
+}
+
+.tablecolor {
+    background-color: lightblue;
+    font-family: 'Patua One', cursive;
+    font-size: 15px;
+    text-align: center;
+    border: 2px solid black;
+}
+
+.table1 {
+    margin-top: 50%;
+    background-color: darkblue;
+}
+
+p {
+    font-family: 'Philosopher', sans-serif;
+    font-style: italic;
+    font-size: 18px;
+    background-color: lightgrey;
+    padding: 10px;
+}
+
+.textTitle {
+    font-size: 30px;
+    font-family: 'Cardo', serif;
+    text-decoration: underline;
+    color: black;
+    background-color: whitesmoke;
+    padding: 10px;
+}
+
+.pictable {
+    background-color: lightgray;
+    border: 1px solid black;
+    padding: 2%;
+    font-family: 'Cardo', serif;
+    text-align: center;
+    font-size: 15px;
+}
+
+#Baden {
+    margin-top: 100px
+}
+
+#medal {
+    margin-top: 1500px;
+}
+
+#badenmeeting {
+    margin-top: 1500px;
+}
+
+#BPGrave {
+    margin-top: 1500px;
+}
+
+#BadenPic {
+    margin-top: 1300px;
+}
+
+#BaderCef {
+    margin-top: 700px
+}
+
+#badenstreet {
+    margin-top: 1400px
+}
+
+#olvefBaden {
+    margin-top: 750px;
+}

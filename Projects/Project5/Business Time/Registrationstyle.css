@@ -1,0 +1,35 @@
+.title {
+    text-align: center;
+    font-size: 60px;
+    font-family: 'Acme', sans-serif;
+    background-color: azure;
+    color: black;
+    margin-bottom: 3%;
+    border-radius: 50%;
+    padding: 2;
+}
+.navbar{
+    font-family: 'Russo One', sans-serif;
+}
+#dropdown{
+    background-color: lightcoral !important;
+}
+.backcolor {
+    background-color: ghostwhite;
+    text-align: center;
+}
+
+label {
+    font-size: 15px;
+    text-align: center;
+    color: black;
+    font-family: 'Patua One', cursive;
+}
+
+head,
+body {
+    background-image: url(Image/HviNGf.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 650px;
+}
