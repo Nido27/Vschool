@@ -51,13 +51,12 @@ app.controller("BreakfastCtrl", function ($scope, todoReq) {
             var data = {
                 name: $scope.BreakfastItem[$index].name,
                 image: $scope.BreakfastItem[$index].image,
-                type: $scope.BreakfastItem[$index].type,
-                description: $scope.BreakfastItem[$index].description
+                description: $scope.BreakfastItem[$index].description,
+                type: $scope.BreakfastItem[$index].type
             };
 
             todoReq.editData(id, data).then(function () {
                 $scope.loadData();
-                $scope.editStatus();
             }, function (error) {
                 console.log(error.status);
             });
@@ -94,7 +93,7 @@ app.controller("BreakfastCtrl", function ($scope, todoReq) {
     }
 
     //Show/Hide Edit
-    $scope.editStatus = function (_id) {
+    $scope.editShowing = function (_id) {
         index = $scope.getIndex(_id);
         $scope.BreakfastItem[index].isShowingEdit = !$scope.BreakfastItem[index].isShowingEdit;
        

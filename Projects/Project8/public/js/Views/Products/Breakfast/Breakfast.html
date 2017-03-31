@@ -3,7 +3,7 @@
         <!-- status -->
         <div ng-repeat="item in BreakfastItem  | orderBy :sort :true">
            <div ng-if="item.type =='breakfast'|| item.type =='Breakfast'">
-            <div class="row">
+            <div class="col-md-6">
                 <div class="row">
                     <div class="col-md-8" ng-if="!item.isShowingEdit">
                         <div class="col-md-12 col-md-offset-3">
@@ -12,11 +12,11 @@
                         <div class="col-md-12 col-md-offset-1">
                            <!-- add the get by id later-->
                             <a href="#/onePost/{{item._id}}" >
-                                <p class="titleTxtStyle">{{item.name}}</p>
+                                <p>{{item.name}}</p>
                             </a>
                         </div>
                         <div class="col-md-8 col-md-offset-1">
-                            <p class="descTxtStyle">{{item.description}}</p>
+                            <p>{{item.description}}</p>
                         </div>
                     </div>
                     <div class="col-md-1 col-md-offset-3" ng-if="!item.isShowingEdit">
@@ -33,14 +33,13 @@
                                 <input ng-model="item.name" class="form-control">
                                 <input ng-model="item.image" class="form-control">
                                 <input ng-model="item.type" class="form-control ">
-                                <textarea ng-model="item.description" class="form-control "></textarea>
+                                <textarea ng-model="item.description" class="form-control"></textarea>
                                 <div class="col-md-8 col-md-offset-11">
                                     <button ng-click="edit(item._id);" class="glyphicon glyphicon-pencil btn btn-success"></button>
                                 </div>
                             </div>
                         </div>
                     </div>
-
                 </div>
                 <div class="row">
                     <div class="col-md-5 col-md-offset-9">
@@ -67,7 +66,7 @@
                     </div>
                     <div class="col-md-2 col-md-offset-1">
                         <!--edit part-->
-                        <button ng-click="editStatus(item._id)" class="btn btn-warning" title="Edit">Edit</button>
+                        <button ng-click="editShowing(item._id)" class="btn btn-warning" title="Edit">Edit</button>
                     </div>
                     <div class="col-md-2">
                         <!--  show Comments-->
