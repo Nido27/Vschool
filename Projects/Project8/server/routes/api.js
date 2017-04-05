@@ -4,14 +4,68 @@ var express = require("express");
 var apiRouter = express.Router();
 var bodyParser = require("body-parser");
 var User = require("../model/user.js");
-mongoose.connect('mongodb://localhost/Resto');
-
-
+var PrivOption = require("../middleware/PrivOption.js");
 
 apiRouter.use(bodyParser.urlencoded({
     extended: false
 }));
 apiRouter.use(bodyParser.json());
+
+//get all user
+apiRouter.get("/User", function (req, res) {
+    User.find({}, function (err, data) {
+        if (err) {
+            res.status(500).send({
+                message: "Error in db",
+                err: err
+            });
+
+        } else {
+            res.status(200).send({
+                message: "here is the data",
+                data: data
+            })
+        }
+    })
+});
+
+//// delete user
+apiRouter.delete("/User/:id", function (req, res) {
+    User.findById(req.params.id, function (err, result) {
+        if (err) {
+            res.status(500).send(err);
+        } else if (result == undefined) {
+            res.status(404).send(err);
+        } else {
+            result.remove();
+            res.status(200).send({
+                message: "Item has been deleted"
+            });
+        }
+    })
+})
+
+
+////add user
+apiRouter.post("/User", function (req, res) {
+    var newUser = new User(req.body);
+    newUser.save(function (err, data) {
+        if (err) {
+            res.status(500).send({
+                message: "Error in db",
+                err: err
+            });
+
+        } else {
+            res.status(200).send({
+                message: "here is the data",
+                data: data
+            })
+        }
+
+    })
+});
+
 
 //get all item
 apiRouter.get("/restoMenu", function (req, res) {
@@ -30,6 +84,7 @@ apiRouter.get("/restoMenu", function (req, res) {
         }
     })
 });
+
 
 //get specifc item
 apiRouter.get("/restoMenu/:id", function (req, res) {
@@ -69,6 +124,8 @@ apiRouter.post("/restoMenu", function (req, res) {
 
     })
 });
+
+apiRouter.use(PrivOption);
 
 // delete item
 apiRouter.delete("/restoMenu/:id", function (req, res) {
@@ -139,41 +196,9 @@ apiRouter.put("/restoMenu/:id", function (req, res) {
 })
 
 
-////add user
-//apiRouter.post("/User", function (req, res) {
-//    var newUser = new User(req.body);
-//    newUser.save(function (err, data) {
-//        if (err) {
-//            res.status(500).send({
-//                message: "Error in db",
-//                err: err
-//            });
-//
-//        } else {
-//            res.status(200).send({
-//                message: "here is the data",
-//                data: data
-//            })
-//        }
-//
-//    })
-//});
 
-//// delete user
-//apiRouter.delete("/User/:id", function (req, res) {
-//    User.findById(req.params.id, function (err, result) {
-//        if (err) {
-//            res.status(500).send(err);
-//        } else if (result == undefined) {
-//            res.status(404).send(err);
-//        } else {
-//            result.remove();
-//            res.status(200).send({
-//                message: "Item has been deleted"
-//            });
-//        }
-//    })
-//})
+
+
 
 
 ////get specifc user
@@ -194,23 +219,6 @@ apiRouter.put("/restoMenu/:id", function (req, res) {
 //    })
 //});
 
-////get all user
-//apiRouter.get("/User", function (req, res) {
-//    User.find({}, function (err, data) {
-//        if (err) {
-//            res.status(500).send({
-//                message: "Error in db",
-//                err: err
-//            });
-//
-//        } else {
-//            res.status(200).send({
-//                message: "here is the data",
-//                data: data
-//            })
-//        }
-//    })
-//});
 
 
 //    //edit User

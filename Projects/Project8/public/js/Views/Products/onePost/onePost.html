@@ -2,7 +2,7 @@
     <div class="row" ng-init="loadDatabyId()">
         <div class="row">
             <div class="col-md-8" ng-if="!item.isShowingEdit">
-               <div class="col-md-12 col-md-offset-1">
+                <div class="col-md-12 col-md-offset-1">
                     <img ng-src="{{item.image}}" class="img-responsive">
                 </div>
                 <div class="col-md-12 col-md-offset-1">
@@ -29,11 +29,19 @@
                                 <button ng-click="deleteItem(item._id)" class="btn btn-danger" title="Remove">X</button>
                             </a>
                         </div>
-                        <input ng-model="item.title" class="form-control">
+                        <input ng-model="item.name" class="form-control">
                         <input ng-model="item.image" class="form-control">
+                        <select ng-model="item.typeTemp" class="form-control">
+                            <option>{{item.type}}</option>
+                            <option value="Breakfast">Breakfast</option>
+                            <option value="Desserts">Desserts</option>
+                            <option value="JuiceAndIceCream">Juice & IceCream</option>
+                            <option value="Platters">Platters</option>
+                            <option value="Sandwish">Sandwish</option>
+                        </select>
                         <textarea ng-model="item.description" class="form-control"></textarea>
                         <div class="col-md-8 col-md-offset-11">
-                            <button ng-click="edit(item._id);" class="glyphicon glyphicon-pencil btn btn-success"></button>
+                            <button ng-click="edit(item._id);editType(item._id)" class="glyphicon glyphicon-pencil btn btn-success"></button>
                         </div>
                     </div>
                 </div>
@@ -60,11 +68,11 @@
         <div class="row">
             <div class="col-md-2 ">
                 <!--add a comment -->
-                <button ng-click="showHideAddComment(item._id)" class="btn btn-warning" title="Add">Add Comment</button>
+                <button ng-click="showHideAddComment()" class="btn btn-warning" title="Add">Add Comment</button>
             </div>
             <div class="col-md-2 col-md-offset-1">
                 <!--edit part-->
-                <button ng-click="editStatus(item._id)" class="btn btn-warning" title="Edit">Edit</button>
+                <button ng-click="editShowing()" class="btn btn-warning" title="Edit">Edit</button>
             </div>
             <div class="col-md-2">
                 <!--  show Comments-->
@@ -73,7 +81,7 @@
         </div>
         <!--add Comment part-->
         <div class="row">
-             <div class="col-md-8 col-md-offset-1">
+            <div class="col-md-8 col-md-offset-1">
                 <div ng-if="item.isShowingAddComment">
                     <textarea ng-model="commentTxt" placeholder="Enter a Comment" class="form-control CommentBox" placeholder="Enter a Comment"></textarea>
                     <div class="col-md-9 col-md-offset-11">

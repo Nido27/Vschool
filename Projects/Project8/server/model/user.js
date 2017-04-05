@@ -27,7 +27,7 @@ var userSchema = new Schema({
         require: true
     },
     age: {
-        type: Number,
+        type: String,
         require: true
     },
     Country: {
@@ -37,7 +37,12 @@ var userSchema = new Schema({
     Email: {
         type: String,
         require: true,
-         unique: true
+        unique: true
+    },
+    privilege: {
+        type: String,
+        enum: ["Admin", "User"],
+        required: true
     }
 });
 

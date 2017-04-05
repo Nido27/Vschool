@@ -2,7 +2,7 @@
     <div class="col-md-10 col-md-offset-1">
         <!-- status -->
         <div ng-repeat="item in DessertsItem  | orderBy :sort :true">
-           <div ng-if="item.type =='desserts'|| item.type =='Desserts'">
+           <div ng-if="item.type =='Desserts'">
             <div class="col-md-6">
                 <div class="row">
                     <div class="col-md-8" ng-if="!item.isShowingEdit">
@@ -32,10 +32,17 @@
                                 </div>
                                 <input ng-model="item.name" class="form-control">
                                 <input ng-model="item.image" class="form-control">
-                                <input ng-model="item.type" class="form-control ">
+                                 <select ng-model="item.typeTemp" class="form-control">
+                                            <option>{{item.type}}</option>
+                                            <option value="Breakfast">Breakfast</option>
+                                            <option value="Desserts">Desserts</option>
+                                            <option value="JuiceAndIceCream">Juice & IceCream</option>
+                                            <option value="Platters">Platters</option>
+                                            <option value="Sandwish">Sandwish</option>
+                                        </select>
                                 <textarea ng-model="item.description" class="form-control"></textarea>
                                 <div class="col-md-8 col-md-offset-11">
-                                    <button ng-click="edit(item._id);" class="glyphicon glyphicon-pencil btn btn-success"></button>
+                                  <button ng-click="edit(item._id);editType(item._id)" class="glyphicon glyphicon-pencil btn btn-success"></button>
                                 </div>
                             </div>
                         </div>

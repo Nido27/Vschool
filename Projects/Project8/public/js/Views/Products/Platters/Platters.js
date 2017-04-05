@@ -7,7 +7,7 @@ app.config(function ($routeProvider) {
 })
 
 app.controller("PlattersCtrl", function ($scope, todoReq) {
-       $scope.PlattersItem = [];
+    $scope.PlattersItem = [];
     $scope.sort = function (item) {
         return item.upVoted - item.downVoted;
     }
@@ -35,7 +35,8 @@ app.controller("PlattersCtrl", function ($scope, todoReq) {
                     Comment: dataGet[i].Comment,
                     isShowingComment: false,
                     isShowingAddComment: false,
-                    isShowingEdit: false
+                    isShowingEdit: false,
+                   typeTemp: dataGet[i].type
                 })
             }
         }, function (response) {
@@ -43,8 +44,7 @@ app.controller("PlattersCtrl", function ($scope, todoReq) {
         })
     };
 
-
-    //Edit
+//Edit
     $scope.edit = function (_id) {
             $index = $scope.getIndex(_id);
             var id = $scope.PlattersItem[$index]._id;
@@ -52,12 +52,24 @@ app.controller("PlattersCtrl", function ($scope, todoReq) {
                 name: $scope.PlattersItem[$index].name,
                 image: $scope.PlattersItem[$index].image,
                 description: $scope.PlattersItem[$index].description,
-                type: $scope.PlattersItem[$index].type
+                typeTemp: $scope.PlattersItem[$index].typeTemp
             };
-
             todoReq.editData(id, data).then(function () {
                 $scope.loadData();
-                
+            }, function (error) {
+                console.log(error.status);
+            });
+        }
+    
+      //EditType
+    $scope.editType = function (_id) {
+            $index = $scope.getIndex(_id);
+            var id = $scope.PlattersItem[$index]._id;
+            var data = {
+                type: $scope.PlattersItem[$index].typeTemp
+            };
+            todoReq.editData(id, data).then(function () {
+                $scope.loadData();
             }, function (error) {
                 console.log(error.status);
             });
@@ -97,7 +109,7 @@ app.controller("PlattersCtrl", function ($scope, todoReq) {
     $scope.editShowing = function (_id) {
         index = $scope.getIndex(_id);
         $scope.PlattersItem[index].isShowingEdit = !$scope.PlattersItem[index].isShowingEdit;
-       
+
     }
 
     //Show/Hide Comment

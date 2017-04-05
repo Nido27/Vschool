@@ -35,7 +35,8 @@ app.controller("BreakfastCtrl", function ($scope, todoReq) {
                     Comment: dataGet[i].Comment,
                     isShowingComment: false,
                     isShowingAddComment: false,
-                    isShowingEdit: false
+                    isShowingEdit: false,
+                    typeTemp: dataGet[i].type
                 })
             }
         }, function (response) {
@@ -52,9 +53,23 @@ app.controller("BreakfastCtrl", function ($scope, todoReq) {
                 name: $scope.BreakfastItem[$index].name,
                 image: $scope.BreakfastItem[$index].image,
                 description: $scope.BreakfastItem[$index].description,
-                type: $scope.BreakfastItem[$index].type
+                typeTemp: $scope.BreakfastItem[$index].typeTemp
             };
-
+            todoReq.editData(id, data).then(function () {
+                $scope.loadData();
+                $scope.BreakfastItem[$index].type = $scope.BreakfastItem[$index].typeTemp;
+            }, function (error) {
+                console.log(error.status);
+            });
+        }
+    
+      //EditType
+    $scope.editType = function (_id) {
+            $index = $scope.getIndex(_id);
+            var id = $scope.BreakfastItem[$index]._id;
+            var data = {
+                type: $scope.BreakfastItem[$index].typeTemp
+            };
             todoReq.editData(id, data).then(function () {
                 $scope.loadData();
             }, function (error) {
@@ -96,7 +111,7 @@ app.controller("BreakfastCtrl", function ($scope, todoReq) {
     $scope.editShowing = function (_id) {
         index = $scope.getIndex(_id);
         $scope.BreakfastItem[index].isShowingEdit = !$scope.BreakfastItem[index].isShowingEdit;
-       
+
     }
 
     //Show/Hide Comment

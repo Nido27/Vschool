@@ -1,0 +1,14 @@
+<div class="row">
+    <label>Username :</label>
+    <input type="text" name="Username" placeholder="Username" ng-model="userinput.Username" />
+</div>
+<div class="row">
+    <label>Password :</label>
+    <input type="Password" name="Password" placeholder="Password" ng-model="userinput.Password" />
+</div>
+
+<div>
+    <button ng-click="signin()">signin</button>
+    <p>{{userinput.Username}}</p>
+    <p>{{userinput.Password}}</p>
+</div>

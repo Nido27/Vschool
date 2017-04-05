@@ -1,6 +1,6 @@
 var app = angular.module("app.onePost", ["ngRoute", "todoReqModule"]);
 app.config(function ($routeProvider) {
-    $routeProvider.when("/onePost", {
+    $routeProvider.when("/onePost/:id", {
         templateUrl: "/js/Views/Products/onePost/onePost.html",
         controller: "onePostCtrl"
     })
@@ -14,16 +14,16 @@ app.controller("onePostCtrl", function ($scope, $routeParams, todoReq) {
             $scope.item = dataGet;
             $scope.item = {
                 _id: dataGet._id,
-                image: dataGet.image,
                 name: dataGet.name,
                 description: dataGet.description,
+                image: dataGet.image,
                 upVoted: dataGet.upVoted || 0,
                 downVoted: dataGet.downVoted || 0,
-                type: dataGet.type,
                 Comment: dataGet.Comment,
                 isShowingComment: false,
                 isShowingAddComment: false,
-                isShowingEdit: false
+                isShowingEdit: false,
+                typeTemp: dataGet.type
             }
         }, function (response) {
             console.log(response.status);
@@ -52,14 +52,12 @@ app.controller("onePostCtrl", function ($scope, $routeParams, todoReq) {
 
     //Show/Hide addComment
     $scope.showHideAddComment = function () {
-
         $scope.item.isShowingAddComment = !$scope.item.isShowingAddComment;
     }
 
     //Show/Hide Edit
     $scope.editShowing = function () {
-        $scope.isShowingEdit = !$scope.isShowingEdit;
-       
+        $scope.item.isShowingEdit = !$scope.item.isShowingEdit;
     }
 
     //Delete
@@ -71,20 +69,34 @@ app.controller("onePostCtrl", function ($scope, $routeParams, todoReq) {
 
     //Edit
     $scope.edit = function () {
-            var data = {
-                name: $scope.name,
-                image: $scope.image,
-                description: $scope.description,
-                type: $scope.type
-            };
+        var data = {
+            image: $scope.item.image,
+            name: $scope.item.name,
+            description: $scope.item.description,
+            typeTemp: $scope.item.typeTemp
+        };
 
-            todoReq.editData(id, data).then(function () {
-                $scope.loadDatabyId();
-            }, function (error) {
-                console.log(error.status);
-            });
-        }
-        //Show/Hide Comment
+        todoReq.editData(id, data).then(function () {
+            $scope.loadDatabyId();
+        }, function (error) {
+            console.log(error.status);
+        });
+    }
+
+
+    //EditType
+    $scope.editType = function (_id) {
+        var data = {
+            type: $scope.item.typeTemp
+        };
+        todoReq.editData(id, data).then(function () {
+            $scope.loadDatabyId();
+        }, function (error) {
+            console.log(error.status);
+        });
+    }
+
+    //Show/Hide Comment
     $scope.showHideComment = function (_id) {
 
             $scope.item.isShowingComment = !$scope.item.isShowingComment;

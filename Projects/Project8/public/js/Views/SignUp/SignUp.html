@@ -1,0 +1,75 @@
+<div class="row">
+    <div class="row">
+        <label>Profile Image :</label>
+        <input type="text" name="Profile
+Image" placeholder="Profile Image" ng-model="userinput.image" />
+    </div>
+
+    <div class="row">
+        <label>First Name :</label>
+        <input type="text" name="First Name" placeholder="First Name" ng-model="userinput.firstName" />
+    </div>
+
+    <div class="row">
+        <label>Last Name :</label>
+        <input type="text" name="Last Name" placeholder="Last Name" ng-model="userinput.lastName" />
+    </div>
+
+    <div class="row">
+
+        <label>Email :</label>
+        <input type="text" name="Email" placeholder="Email" ng-model="userinput.Email" />
+    </div>
+    <div class="row">
+        <label>Username :</label>
+        <input type="text" name="Username" placeholder="Username" ng-model="userinput.Username" />
+    </div>
+    <div class="row">
+        <label>Password :</label>
+        <input type="Password" name="Password" placeholder="Password" ng-model="userinput.Password" />
+    </div>
+
+    <div class="row">
+        <label>Comfirm Password :</label>
+        <input type="Password" name="Password2" placeholder="Comfirm Password" ng-model="userinput.Password2" />
+    </div>
+
+    <div class="row">
+        <label>Gender:</label>
+        <input type="radio" name="gender" value="Male" ng-model="userinput.Gender" />Male
+        <input type="radio" name="gender" value="Female" ng-model="userinput.Gender" />Female
+
+    </div>
+    <div class="row">
+        <label>Country</label>
+        <select name="country" ng-model="userinput.Country">
+            <option value="">---Select Country---</option>
+            <option value="lebanon">Brazil</option>
+            <option value="Franc">Canada</option>
+            <option value="Spain">China</option>
+            <option value="Spain">France</option>
+            <option value="Spain">Germany</option>
+            <option value="Spain">Greek</option>
+            <option value="Spain">Italy</option>
+            <option value="Spain">Japan</option>
+            <option value="Spain">Lebanon</option>
+            <option value="Spain">Spain</option>
+            <option value="Spain">UK</option>
+            <option value="Spain">USA</option>
+        </select>
+    </div>
+    <div class="row">
+        <label>Birthday Date :</label>
+        <input type="date" name="Birthday Date" ng-model="userinput.age" />
+    </div>
+    <!--
+    <div class="row">
+        <input type="checkbox" vaule="1" />
+        <b><i>I accept rules and refulations</i></b>
+    </div>
+-->
+        <div>
+            <button ng-click="signup()" ng-disabled="validate()" class="btn btn-success">Submit</button>
+            <button ng-click="Reset()">Reset</button>
+
+        </div>

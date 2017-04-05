@@ -35,7 +35,8 @@ app.controller("DessertsCtrl", function ($scope, todoReq) {
                     Comment: dataGet[i].Comment,
                     isShowingComment: false,
                     isShowingAddComment: false,
-                    isShowingEdit: false
+                    isShowingEdit: false,
+                    typeTemp: dataGet[i].type
                 })
             }
         }, function (response) {
@@ -44,7 +45,7 @@ app.controller("DessertsCtrl", function ($scope, todoReq) {
     };
 
 
-    //Edit
+   //Edit
     $scope.edit = function (_id) {
             $index = $scope.getIndex(_id);
             var id = $scope.DessertsItem[$index]._id;
@@ -52,12 +53,24 @@ app.controller("DessertsCtrl", function ($scope, todoReq) {
                 name: $scope.DessertsItem[$index].name,
                 image: $scope.DessertsItem[$index].image,
                 description: $scope.DessertsItem[$index].description,
-                type: $scope.DessertsItem[$index].type
+                typeTemp: $scope.DessertsItem[$index].typeTemp
             };
-
             todoReq.editData(id, data).then(function () {
                 $scope.loadData();
-                
+            }, function (error) {
+                console.log(error.status);
+            });
+        }
+    
+      //EditType
+    $scope.editType = function (_id) {
+            $index = $scope.getIndex(_id);
+            var id = $scope.DessertsItem[$index]._id;
+            var data = {
+                type: $scope.DessertsItem[$index].typeTemp
+            };
+            todoReq.editData(id, data).then(function () {
+                $scope.loadData();
             }, function (error) {
                 console.log(error.status);
             });
