@@ -1,4 +1,4 @@
-var app = angular.module("app.SignUp", ["ngRoute", "todoReqModule"]);
+var app = angular.module("app.SignUp", ["ngRoute", "todoReqModule","authModule"]);
 app.config(function ($routeProvider) {
     $routeProvider.when("/SignUp", {
         templateUrl: "/js/Views/SignUp/SignUp.html",
@@ -20,7 +20,7 @@ app.controller("signupCtrl", function ($scope, authSerivce, $location) {
             Gender: $scope.userinput.Gender,
             age: $scope.userinput.age,
             Country: $scope.userinput.Country,
-            privilege:$scope.userinput.privilege || "User"
+            privilege:$scope.userinput.privilege
         }
         authSerivce.signup(data).then(function (response) {
             console.log(response.data);

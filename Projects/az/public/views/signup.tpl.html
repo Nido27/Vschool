@@ -1,0 +1,10 @@
+<div>
+  <input ng-model="userinput.username" type="text" placeholder="Username">
+  <input ng-model="userinput.password" type="password" placeholder="Password">
+  <input ng-model="userinput.passwordOther" type="password" placeholder="Confirm Password">
+  <input ng-model="userinput.privilage" type="text" placeholder="privilage">
+  <div ng-if="password != passwordOther">
+    <p>Passwords must match</p>
+  </div>
+  <button ng-click="signup()">Signup</button>
+</div>

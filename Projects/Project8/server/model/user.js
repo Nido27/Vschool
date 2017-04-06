@@ -39,10 +39,10 @@ var userSchema = new Schema({
         require: true,
         unique: true
     },
-    privilege: {
+   privilege: {
         type: String,
         enum: ["Admin", "User"],
-        required: true
+        default: "User"
     }
 });
 

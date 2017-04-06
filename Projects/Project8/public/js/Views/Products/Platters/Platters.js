@@ -1,4 +1,4 @@
-var app = angular.module("app.Platters", ["ngRoute", "todoReqModule"]);
+var app = angular.module("app.Platters", ["ngRoute", "todoReqModule", "privModule"]);
 app.config(function ($routeProvider) {
     $routeProvider.when("/Platters", {
         templateUrl: "/js/Views/Products/Platters/Platters.html",
@@ -6,8 +6,9 @@ app.config(function ($routeProvider) {
     })
 })
 
-app.controller("PlattersCtrl", function ($scope, todoReq) {
+app.controller("PlattersCtrl", function ($scope, todoReq, privService) {
     $scope.PlattersItem = [];
+     $scope.priv = privService.getPriv();
     $scope.sort = function (item) {
         return item.upVoted - item.downVoted;
     }
@@ -118,11 +119,8 @@ app.controller("PlattersCtrl", function ($scope, todoReq) {
             $scope.PlattersItem[index].isShowingComment = !$scope.PlattersItem[index].isShowingComment;
         }
         // Remove Specific Comment
-    $scope.removeComment = function (id, index) {
-            var data = {
-                index: index
-            }
-            todoReq.deleteComment(id, data).then($scope.loadData)
+  $scope.removeComment = function (id, index) {
+            todoReq.deleteComment(id, index).then($scope.loadData)
         }
         //Show/Hide addComment
     $scope.showHideAddComment = function (_id) {

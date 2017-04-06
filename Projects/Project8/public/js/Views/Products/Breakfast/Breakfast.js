@@ -1,4 +1,4 @@
-var app = angular.module("app.Breakfast", ["ngRoute", "todoReqModule"]);
+var app = angular.module("app.Breakfast", ["ngRoute", "todoReqModule", "privModule"]);
 app.config(function ($routeProvider) {
     $routeProvider.when("/Breakfast", {
         templateUrl: "/js/Views/Products/Breakfast/Breakfast.html",
@@ -6,8 +6,9 @@ app.config(function ($routeProvider) {
     })
 })
 
-app.controller("BreakfastCtrl", function ($scope, todoReq) {
+app.controller("BreakfastCtrl", function ($scope, todoReq, privService) {
     $scope.BreakfastItem = [];
+     $scope.priv = privService.getPriv();
     $scope.sort = function (item) {
         return item.upVoted - item.downVoted;
     }
@@ -62,7 +63,7 @@ app.controller("BreakfastCtrl", function ($scope, todoReq) {
                 console.log(error.status);
             });
         }
-    
+      
       //EditType
     $scope.editType = function (_id) {
             $index = $scope.getIndex(_id);
@@ -76,6 +77,7 @@ app.controller("BreakfastCtrl", function ($scope, todoReq) {
                 console.log(error.status);
             });
         }
+    
         //Delete
     $scope.deleteItem = function (_id) {
             todoReq.deleteData(_id).then($scope.loadData, function (error) {
@@ -91,7 +93,6 @@ app.controller("BreakfastCtrl", function ($scope, todoReq) {
             upVoted: upvote
         }
         todoReq.upVoted(_id, data).then($scope.loadData)
-
     }
 
 
@@ -121,10 +122,7 @@ app.controller("BreakfastCtrl", function ($scope, todoReq) {
         }
         // Remove Specific Comment
     $scope.removeComment = function (id, index) {
-            var data = {
-                index: index
-            }
-            todoReq.deleteComment(id, data).then($scope.loadData)
+            todoReq.deleteComment(id, index).then($scope.loadData)
         }
         //Show/Hide addComment
     $scope.showHideAddComment = function (_id) {

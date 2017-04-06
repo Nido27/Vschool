@@ -1,0 +1,27 @@
+<div ng-init="loadData()">
+  <div ng-repeat="item in todoItems track by $index">
+    <div name="Show when its not being edited" ng-if="!item.isEdit">
+      <h4>{{item.title}}</h4>
+      <p>{{item.description}}</p>
+      <p>Cost {{item.cost | currency}}</p>
+      <p>{{item.isDone}}</p>
+      <p ng-if="priv == 'admin'">Account: {{item.username}}</p>
+      <button ng-click="toggleEdit(item)">Edit</button>
+      <button ng-click="delete(item._id)" ng-if="priv == 'admin'">Delete</button>
+    </div>
+    <div name="Show when it is being edited" ng-if="item.isEdit">
+      <input placeholder="Title" ng-model="item.title" type="text">
+      <input placeholder="Description" ng-model="item.description" type="text">
+      <input placeholder="Cost" ng-model="item.cost" type="number">
+      <input placeholder="Is Done" ng-model="item.isDone" type="boolean">
+      <button ng-click="saveData(item._id, item)">Save</button>
+    </div>
+
+  </div>
+  <div>
+    <input placeholder="Title" ng-model="userinput.title" type="text">
+    <input placeholder="Description" ng-model="userinput.description" type="text">
+    <input placeholder="Cost" ng-model="userinput.cost" type="number">
+    <button ng-click="addData()">Add</button>
+  </div>
+</div>

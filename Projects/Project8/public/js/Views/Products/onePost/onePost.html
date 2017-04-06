@@ -1,4 +1,4 @@
-<div class="col-md-10 col-md-offset-1">
+<div class="col-md-6 col-md-offset-3">
     <div class="row" ng-init="loadDatabyId()">
         <div class="row">
             <div class="col-md-8" ng-if="!item.isShowingEdit">
@@ -17,7 +17,7 @@
             <div class="col-md-1 col-md-offset-3" ng-if="!item.isShowingEdit">
                 <!--Delete Part-->
                 <a href="#/Home">
-                    <button ng-click="deleteItem(item._id)" class="btn btn-danger" title="Remove">X</button>
+                    <button ng-click="deleteItem(item._id)" class="btn btn-danger" title="Remove" ng-if="priv == 'Admin'">X</button>
                 </a>
             </div>
             <div class="row">
@@ -26,7 +26,7 @@
                         <div class="col-md-1 col-md-offset-12">
                             <!--Delete Part-->
                             <a href="#/Home">
-                                <button ng-click="deleteItem(item._id)" class="btn btn-danger" title="Remove">X</button>
+                                <button ng-click="deleteItem(item._id)" class="btn btn-danger" title="Remove" ng-if="priv == 'Admin'">X</button>
                             </a>
                         </div>
                         <input ng-model="item.name" class="form-control">
@@ -49,7 +49,7 @@
         </div>
         <div class="row">
             <div class="col-md-5 col-md-offset-9">
-                <div class="col-md-4">
+                <div class="col-md-5">
                     <!--like button-->
                     <div class="button-area">
                         <label>{{item.upVoted}}</label>
@@ -66,17 +66,17 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-2 ">
+            <div class="col-md-2 col-md-offset-1">
                 <!--add a comment -->
                 <button ng-click="showHideAddComment()" class="btn btn-warning" title="Add">Add Comment</button>
             </div>
             <div class="col-md-2 col-md-offset-1">
-                <!--edit part-->
-                <button ng-click="editShowing()" class="btn btn-warning" title="Edit">Edit</button>
-            </div>
-            <div class="col-md-2">
                 <!--  show Comments-->
                 <button ng-click="showHideComment(item._id)" class="btn btn-warning" title="Show">Show Comment</button>
+            </div>
+            <div class="col-md-2 col-md-offset-1" ng-if="priv == 'Admin'">
+                <!--edit part-->
+                <button ng-click="editShowing()" class="btn btn-warning" title="Edit">Edit</button>
             </div>
         </div>
         <!--add Comment part-->

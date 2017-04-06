@@ -5,6 +5,18 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaina|Fjalla+One|Griffy|Ranga|Rubik+Mono+One|Sansita" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/css/addItem.css">
+    <link rel="stylesheet" type="text/css" href="/css/Breakfast.css">
+    <link rel="stylesheet" type="text/css" href="/css/ContactUs.css">
+    <link rel="stylesheet" type="text/css" href="/css/Desserts.css">
+    <link rel="stylesheet" type="text/css" href="/css/Feedback.css">
+    <link rel="stylesheet" type="text/css" href="/css/Home.css">
+    <link rel="stylesheet" type="text/css" href="/css/onePost.css">
+    <link rel="stylesheet" type="text/css" href="/css/Platters.css">
+    <link rel="stylesheet" type="text/css" href="/css/Sandwish.css">
+    <link rel="stylesheet" type="text/css" href="/css/Signin.css">
+    <link rel="stylesheet" type="text/css" href="/css/SignUp.css">
+
 </head>
 
 <body ng-app="myApp">
@@ -22,19 +34,20 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="#/Home">Home</a></li>
                     <li class="dropdown">
-                        <a  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">Products <span class="caret"></span></a>
+                        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">Products <span class="caret"></span></a>
                         <ul class="dropdown-menu" id="dropdown">
                             <li><a href="#/Breakfast">Breakfast</a></li>
                             <li><a href="#/Desserts">Desserts</a></li>
                             <li><a href="#/JuiceAndIceCream">Juice & IceCream</a></li>
                             <li><a href="#/Platters">Platters</a></li>
                             <li><a href="#/Sandwish">Sandwish</a></li>
-<!--                            <li><a href="#/addItem">addItem</a></li>-->
+                            <!--                            <li><a href="#/addItem">addItem</a></li>-->
                         </ul>
                     </li>
                     <li><a href="#/SignUp">Registration</a></li>
                     <li><a href="#/Signin">Signin</a></li>
                     <li><a href="#/ContactUs">ContactUs</a></li>
+                     <li><a href="#/Feedback">Feedback</a></li>
                 </ul>
             </div>
         </div>
@@ -43,7 +56,7 @@
         <ng-view></ng-view>
     </div>
 
-<!--    <script src="https://use.fontawesome.com/d266474e8d.js"></script>-->
+    <!--    <script src="https://use.fontawesome.com/d266474e8d.js"></script>-->
     <script src="https://code.angularjs.org/1.6.2/angular.min.js"></script>
     <script src="https://code.angularjs.org/1.6.2/angular-route.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -52,6 +65,7 @@
     <script src="../js/Service/service.js"></script>
     <script src="../js/Service/auth.js"></script>
     <script src="../js/Service/token.js"></script>
+    <script src="../js/Service/priv.js"></script>
     <script src="../js/Views/ContactUs/ContactUs.js"></script>
     <script src="../js/Views/Feedback/Feedback.js"></script>
     <script src="../js/Views/Home/Home.js"></script>
@@ -65,8 +79,9 @@
     <script src="../js/Views/Products/onePost/onePost.js"></script>
     <script src="../js/Views/Products/Platters/Platters.js"></script>
     <script src="../js/Views/Products/Sandwish/Sandwish.js"></script>
-    
-    
+  
+
+
 </body>
 
 </html>
