@@ -1,17 +1,17 @@
 <div class="row">
-    <div class="col-md-12 col-md-offset-1">
-        <h1> Share Your Favorites Active With Us</h1>
+    <div class="col-md-8 col-md-offset-2 titlePost">
+        <p> Share Your Favorites Active With Us</p>
     </div>
 </div>
 <div class="row">
     <div class="col-md-6 col-md-offset-4">
         <!--add Part-->
         <div class="row">
-            <div class="col-md-12 col-md-pull-2">
+            <div class="col-md-12 col-md-pull-2 PostBack">
                 <div>
-                    <input ng-model="image" placeholder="Enter a image" class="form-control">
-                    <input ng-model="name" placeholder="Enter a name" class="form-control">
-                    <select ng-model="type" class="form-control">
+                    <input ng-model="image" placeholder="Enter a image" class="form-control PostinputSpace">
+                    <input ng-model="name" placeholder="Enter a name" class="form-control PostinputSpace">
+                    <select ng-model="type" class="form-control selectTxt PostinputSpace">
                        <option value="" selected="selected">Select type </option>
                         <option value="Breakfast">Breakfast</option>
                         <option value="Desserts">Desserts</option>
@@ -19,9 +19,9 @@
                         <option value="Platters">Platters</option>
                         <option value="Sandwish">Sandwish</option>
                     </select>
-                    <textarea ng-model="description" placeholder="Enter a description" class="form-control"></textarea>
+                    <textarea ng-model="description" placeholder="Enter a description" class="form-control breakdesComt PostinputSpace"></textarea>
                     <div class="col-md-3 col-md-offset-10">
-                        <button ng-click="add();addStatus()" class="btn btn-warning"><a href="#/Home" id="btn-warning">Publish</a></button>
+                        <a href="#/Home" id="btn-warning"><button ng-click="add();addStatus()" class="btn btn-warning btnPost">Publish</button></a>
                     </div>
                 </div>
             </div>

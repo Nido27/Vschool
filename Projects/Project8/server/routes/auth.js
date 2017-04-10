@@ -76,7 +76,8 @@ authRouter.post("/signin", function (req, res) {
             res.status(200).send({
                 "message": "Here is your token",
                 token: token,
-                priv: user.privilege
+                priv: user.privilege,
+                id: user._id
             });
         }
     });

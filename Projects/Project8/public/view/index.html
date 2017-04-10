@@ -12,15 +12,16 @@
     <link rel="stylesheet" type="text/css" href="/css/Feedback.css">
     <link rel="stylesheet" type="text/css" href="/css/Home.css">
     <link rel="stylesheet" type="text/css" href="/css/onePost.css">
-    <link rel="stylesheet" type="text/css" href="/css/Platters.css">
-    <link rel="stylesheet" type="text/css" href="/css/Sandwish.css">
     <link rel="stylesheet" type="text/css" href="/css/Signin.css">
     <link rel="stylesheet" type="text/css" href="/css/SignUp.css">
+    <link rel="stylesheet" type="text/css" href="/css/navbar.css">
+    <link rel="stylesheet" type="text/css" href="/css/AdminRole.css">
+    <link href="https://fonts.googleapis.com/css?family=Chewy|Gloria+Hallelujah|Handlee|Macondo|Marck+Script|Palanquin+Dark|Roboto+Slab|Russo+One" rel="stylesheet">
 
 </head>
 
-<body ng-app="myApp">
-    <nav class="navbar navbar-inverse ">
+<body ng-app="myApp" ng-controller="Index">
+    <nav class="navbar navbar-inverse navbar-fixed-button" >
         <div class="container-fluid">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -28,34 +29,83 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="#/Home">Resto</a>
+                <img src="/view/navlogo.gif" class="navimg">
+                <a href="#/Home" class="navtitle">HM Resto</a>
             </div>
-            <div class="collapse navbar-collapse" id="myNavbar">
+            <div class="collapse navbar-collapse" id="myNavbar"  ng-init="navref()">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#/Home">Home</a></li>
+                    <li><a href="#/Home" class="text">Home</a></li>
                     <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">Products <span class="caret"></span></a>
-                        <ul class="dropdown-menu" id="dropdown">
-                            <li><a href="#/Breakfast">Breakfast</a></li>
-                            <li><a href="#/Desserts">Desserts</a></li>
-                            <li><a href="#/JuiceAndIceCream">Juice & IceCream</a></li>
-                            <li><a href="#/Platters">Platters</a></li>
-                            <li><a href="#/Sandwish">Sandwish</a></li>
-                            <!--                            <li><a href="#/addItem">addItem</a></li>-->
+                        <a class="dropdown-toggle text" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">Products <span class="caret"></span></a>
+                        <ul class="dropdown-menu dropdownStyle" id="dropdown">
+                            <li ng-if="priv == 'Admin'"><a href="#/addItem" class="text">addItem</a></li>
+                            <li><a href="#/Breakfast" class="text">Breakfast</a></li>
+                            <li><a href="#/Desserts" class="text">Desserts</a></li>
+                            <li><a href="#/JuiceAndIceCream" class="text">Juice & IceCream</a></li>
+                            <li><a href="#/Platters" class="text">Platters</a></li>
+                            <li><a href="#/Sandwish" class="text">Sandwish</a></li>
                         </ul>
                     </li>
-                    <li><a href="#/SignUp">Registration</a></li>
-                    <li><a href="#/Signin">Signin</a></li>
-                    <li><a href="#/ContactUs">ContactUs</a></li>
-                     <li><a href="#/Feedback">Feedback</a></li>
+                    <li ng-show="!token"><a href="#/SignUp" class="text">Registration</a></li>
+                    <li ng-show="!token"><a href="#/Signin" class="text">Signin</a></li>
+                    <li ng-if="priv == 'Admin'"><a href="#/AdminRole" class="text">Admin Role</a></li>
+                    <li ng-if="priv == 'User'"><a href="#/Feedback" class="text">Feedback</a></li>
+                    <li ng-if="priv == 'User'"><a href="#/ContactUs" class="text">Contact Us</a></li>
+                    <li ng-show="token" class="signOutBtn">
+                        <button ng-click="signOut()" class="glyphicon glyphicon-off signOutBtn"></button>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
+
     <div class="container">
         <ng-view></ng-view>
     </div>
-
+    <footer>
+        <div id="footer">
+            <div class="container">
+                <div class="row">
+                    <h3 class="footertext">About Us:</h3>
+                    <br>
+                    <div class="col-md-4">
+                        <center>
+                            <img src="/view/Chef-2-icon.png" width="100px" class="img-circle" alt="the-brains">
+                            <br>
+                            <h4 class="footertext">Chef</h4>
+                            <p class="footertext">You can thank all the crazy food here to this guy.
+                                <br>
+                        </center>
+                    </div>
+                    <div class="col-md-4">
+                        <center>
+                            <img src="/view/stove-512.png" width="100px" class="img-circle" alt="...">
+                            <br>
+                            <h4 class="footertext">Cooker</h4>
+                            <p class="footertext">All the Food here are bake done by this Cooker.
+                                <br>
+                        </center>
+                    </div>
+                    <div class="col-md-4">
+                        <center>
+                            <img src="/view/cleaner.png"  width="100px" class="img-circle" alt="...">
+                            <br>
+                            <h4 class="footertext">Cleaner</h4>
+                            <p class="footertext">This clean place and the good smell it holds are all thanks to this woman.
+                                <br>
+                        </center>
+                    </div>
+                </div>
+                <div class="row">
+                    <p>
+                        <center>
+                            <p class="footertext">	&copy; HM Resto -- All Rights Reserved Privacy PolicyTerms and Conditions </p>
+                        </center>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
     <!--    <script src="https://use.fontawesome.com/d266474e8d.js"></script>-->
     <script src="https://code.angularjs.org/1.6.2/angular.min.js"></script>
     <script src="https://code.angularjs.org/1.6.2/angular-route.min.js"></script>
@@ -67,6 +117,7 @@
     <script src="../js/Service/token.js"></script>
     <script src="../js/Service/priv.js"></script>
     <script src="../js/Views/ContactUs/ContactUs.js"></script>
+    <script src="../js/Views/AdminRole/AdminRole.js"></script>
     <script src="../js/Views/Feedback/Feedback.js"></script>
     <script src="../js/Views/Home/Home.js"></script>
     <script src="../js/Views/Products/Products.js"></script>
@@ -79,7 +130,7 @@
     <script src="../js/Views/Products/onePost/onePost.js"></script>
     <script src="../js/Views/Products/Platters/Platters.js"></script>
     <script src="../js/Views/Products/Sandwish/Sandwish.js"></script>
-  
+
 
 
 </body>

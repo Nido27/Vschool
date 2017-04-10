@@ -1,0 +1,62 @@
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+    height: 100%;
+    background-image: url(/js/Views/SignUp/pexels-photo-349609.jpeg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+label {
+    font-family: 'Handlee', cursive;
+    font-size: 20px;
+    color: white;
+}
+
+.signUPback {
+    background-color: rgba(119, 1, 127, 0.5);
+    padding: 25px;
+    border-radius: 30px;
+}
+
+.title {
+    font-family: 'Gloria Hallelujah', cursive;
+    color: rgb(119, 1, 127);
+    background-color: rgba(255, 255, 255, 0.5);
+    font-size: 40px;
+    border-radius: 60px;
+    padding: 15px;
+    margin-bottom: 40px;
+    margin-left: 3%;
+    text-align: center;
+}
+
+input,
+select {
+    font-family: 'Palanquin Dark', sans-serif !important;
+    background-color: rgba(184, 146, 242, 0.5) !important;
+    font-size: 15px !important;
+    color: darkblue!important;
+}
+
+.genderInput {
+    font-family: 'Palanquin Dark', sans-serif !important;
+    color: wheat;
+    font-size: 25px !important;
+    margin-left:10%!important;
+}
+
+label {
+    font-family: 'Palanquin Dark', sans-serif !important;
+    font-size: 22px !important;
+    color: wheat;
+}
+.buttonPos{
+    margin-top: 2%;
+}
+.btnText{
+    font-family: 'Palanquin Dark', sans-serif !important;
+    font-size: 30px !important;
+    padding-bottom: 50px;
+}

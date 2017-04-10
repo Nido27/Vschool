@@ -1,4 +1,4 @@
-var app = angular.module("app.Platters", ["ngRoute", "todoReqModule", "privModule"]);
+var app = angular.module("app.Platters", ["ngRoute", "todoReqModule", "privModule" ,"tokenModule"]);
 app.config(function ($routeProvider) {
     $routeProvider.when("/Platters", {
         templateUrl: "/js/Views/Products/Platters/Platters.html",
@@ -6,7 +6,7 @@ app.config(function ($routeProvider) {
     })
 })
 
-app.controller("PlattersCtrl", function ($scope, todoReq, privService) {
+app.controller("PlattersCtrl", function ($scope, todoReq, TokenService, privService) {
     $scope.PlattersItem = [];
      $scope.priv = privService.getPriv();
     $scope.sort = function (item) {

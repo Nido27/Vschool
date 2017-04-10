@@ -1,4 +1,4 @@
-var app = angular.module("app.onePost", ["ngRoute", "todoReqModule", "privModule"]);
+var app = angular.module("app.onePost", ["ngRoute", "todoReqModule", "privModule", "tokenModule"]);
 app.config(function ($routeProvider) {
     $routeProvider.when("/onePost/:id", {
         templateUrl: "/js/Views/Products/onePost/onePost.html",
@@ -6,9 +6,11 @@ app.config(function ($routeProvider) {
     })
 })
 
-app.controller("onePostCtrl", function ($scope, $routeParams, todoReq, privService) {
+app.controller("onePostCtrl", function ($scope, $routeParams, todoReq, TokenService, privService) {
+
     var id = $routeParams.id;
-     $scope.priv = privService.getPriv();
+    
+    $scope.priv = privService.getPriv();
     $scope.loadDatabyId = function () {
         todoReq.getDataById(id).then(function (response) {
             var dataGet = response.data.data;
@@ -103,7 +105,7 @@ app.controller("onePostCtrl", function ($scope, $routeParams, todoReq, privServi
             $scope.item.isShowingComment = !$scope.item.isShowingComment;
         }
         // Remove Specific Comment
- $scope.removeComment = function (id, index) {
+    $scope.removeComment = function (id, index) {
             todoReq.deleteComment(id, index).then($scope.loadData)
         }
         //addcomment

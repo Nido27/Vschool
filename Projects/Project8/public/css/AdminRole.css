@@ -1,0 +1,21 @@
+.BtnRole{
+    background-color: rgba(242, 240, 236,0.5) !important;
+    font-size: 30px;
+    color: #77017F;
+    font-family: 'Marck Script', cursive;
+    border-radius: 20px;
+    border: solid  #77017F 2px;
+}
+
+
+.RoleImg{
+      border-radius: 20px;
+    text-align: center;
+}
+
+.btnRolePos{
+    margin-top: 10px;
+}
+
+
+

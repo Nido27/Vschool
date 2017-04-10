@@ -1,0 +1,74 @@
+.backBreakFast {
+    background-color: rgba(119, 1, 127, 0.5);
+    margin: 5px;
+    border-radius: 60px;
+    padding: 20px;
+    height: 450px;
+    overflow-x: hidden;
+}
+
+.imgBreak {
+    border-radius: 20px;
+}
+.editbreak{
+    margin-top: 50px !important;
+}
+.titleBreakfast {
+    font-family: 'Gloria Hallelujah', cursive;
+    color: rgb(119, 1, 127);
+    background-color: rgba(255, 255, 255, 0.5);
+    font-size: 50px;
+    border-radius: 60px;
+    padding: 15px;
+    text-align: center;
+}
+
+.Breaktitle,
+.Breaktitle:link,
+.Breaktitle:visited,
+.Breaktitle:hover,
+.Breaktitle:active {
+    color: wheat;
+    font-size: 22px;
+    font-family: 'Gloria Hallelujah', cursive;
+    text-decoration: none !important;
+    margin-top: 20px !important;
+}
+
+.desBreak {
+    color: white;
+    font-size: 22px;
+    font-family: 'Macondo', cursive;
+}
+
+.likeBreak {
+    position: relative;
+    bottom: 30px;
+}
+
+.unlikeBreak {
+    position: relative;
+    bottom: 30px;
+}
+
+.btnBreak {
+    font-family: 'Gloria Hallelujah', cursive !important;
+}
+
+.breakdesComt {
+    background-color: rgba(184, 146, 242, 0.5);
+    font-family: 'Chewy', cursive;
+    color: darkblue;
+    font-size: 20px;
+}
+
+.BreakComment {
+    margin: 7px;
+    font-family: 'Chewy', cursive;
+    color: white;
+    font-size: 25px;
+}
+
+.commentrowbreak {
+    margin-top: 16px;
+}

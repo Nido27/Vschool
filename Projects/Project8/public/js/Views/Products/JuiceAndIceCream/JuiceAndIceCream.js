@@ -1,4 +1,4 @@
-var app = angular.module("app.JuiceAndIceCream", ["ngRoute", "todoReqModule", "privModule"]);
+var app = angular.module("app.JuiceAndIceCream", ["ngRoute", "todoReqModule", "privModule", "tokenModule"]);
 app.config(function ($routeProvider) {
     $routeProvider.when("/JuiceAndIceCream", {
         templateUrl: "/js/Views/Products/JuiceAndIceCream/JuiceAndIceCream.html",
@@ -6,9 +6,9 @@ app.config(function ($routeProvider) {
     })
 })
 
-app.controller("JuiceAndIceCreamCtrl", function ($scope, todoReq, privService) {
-       $scope.juiceAndIceCreamItem = [];
-     $scope.priv = privService.getPriv();
+app.controller("JuiceAndIceCreamCtrl", function ($scope, todoReq, TokenService, privService) {
+    $scope.juiceAndIceCreamItem = [];
+    $scope.priv = privService.getPriv();
     $scope.sort = function (item) {
         return item.upVoted - item.downVoted;
     }
@@ -37,7 +37,7 @@ app.controller("JuiceAndIceCreamCtrl", function ($scope, todoReq, privService) {
                     isShowingComment: false,
                     isShowingAddComment: false,
                     isShowingEdit: false,
-                   typeTemp: dataGet[i].type
+                    typeTemp: dataGet[i].type
                 })
             }
         }, function (response) {
@@ -46,24 +46,24 @@ app.controller("JuiceAndIceCreamCtrl", function ($scope, todoReq, privService) {
     };
 
 
-       //Edit
+    //Edit
     $scope.edit = function (_id) {
-            $index = $scope.getIndex(_id);
-            var id = $scope.juiceAndIceCreamItem[$index]._id;
-            var data = {
-                name: $scope.juiceAndIceCreamItem[$index].name,
-                image: $scope.juiceAndIceCreamItem[$index].image,
-                description: $scope.juiceAndIceCreamItem[$index].description,
-                typeTemp: $scope.juiceAndIceCreamItem[$index].typeTemp
-            };
-            todoReq.editData(id, data).then(function () {
-                $scope.loadData();
-            }, function (error) {
-                console.log(error.status);
-            });
-        }
-    
-      //EditType
+        $index = $scope.getIndex(_id);
+        var id = $scope.juiceAndIceCreamItem[$index]._id;
+        var data = {
+            name: $scope.juiceAndIceCreamItem[$index].name,
+            image: $scope.juiceAndIceCreamItem[$index].image,
+            description: $scope.juiceAndIceCreamItem[$index].description,
+            typeTemp: $scope.juiceAndIceCreamItem[$index].typeTemp
+        };
+        todoReq.editData(id, data).then(function () {
+            $scope.loadData();
+        }, function (error) {
+            console.log(error.status);
+        });
+    }
+
+    //EditType
     $scope.editType = function (_id) {
             $index = $scope.getIndex(_id);
             var id = $scope.juiceAndIceCreamItem[$index]._id;
@@ -111,7 +111,7 @@ app.controller("JuiceAndIceCreamCtrl", function ($scope, todoReq, privService) {
     $scope.editShowing = function (_id) {
         index = $scope.getIndex(_id);
         $scope.juiceAndIceCreamItem[index].isShowingEdit = !$scope.juiceAndIceCreamItem[index].isShowingEdit;
-       
+
     }
 
     //Show/Hide Comment
@@ -120,7 +120,7 @@ app.controller("JuiceAndIceCreamCtrl", function ($scope, todoReq, privService) {
             $scope.juiceAndIceCreamItem[index].isShowingComment = !$scope.juiceAndIceCreamItem[index].isShowingComment;
         }
         // Remove Specific Comment
-$scope.removeComment = function (id, index) {
+    $scope.removeComment = function (id, index) {
             todoReq.deleteComment(id, index).then($scope.loadData)
         }
         //Show/Hide addComment

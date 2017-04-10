@@ -1,0 +1,102 @@
+/*
+font-family: 'Macondo', cursive; crazy text
+font-family: 'Palanquin Dark', sans-serif; blod title
+font-family: 'Roboto Slab', serif; normal text
+font-family: 'Gloria Hallelujah', cursive; super crazy text
+font-family: 'Russo One', sans-serif; blod to title
+font-family: 'Chewy', cursive; cute blod text
+font-family: 'Handlee', cursive; special text type
+font-family: 'Marck Script', cursive; for footer
+*/
+
+body {
+    background-color: white;
+}
+
+nav {
+    padding: 10px 20px 10px 20px !important;
+}
+
+.navtitle,
+.navtitle:link,
+.navtitle:visited,
+.navtitle:hover,
+.navtitle:active {
+    color: white !important;
+    font-size: 30px !important;
+    position: relative;
+    top: 8px;
+    left: 7px;
+    font-family: 'Gloria Hallelujah', cursive;
+    text-decoration: none;
+    background-color: #77017F !important;
+    text-decoration: none;
+}
+
+.navimg {
+    width: 15%;
+    margin-left: 1%;
+    padding-left: 2%;
+}
+
+.text,
+.text:link,
+.text:visited,
+.text:hover,
+.text:active {
+    color: white !important;
+    font-size: 25px;
+    position: relative;
+    top: 3px;
+    left: 7px;
+    font-family: 'Gloria Hallelujah', cursive;
+    text-decoration: none;
+    background-color: #77017F !important;
+}
+
+.signOutBtn {
+    position: relative;
+    top: 6px;
+    color: white;
+    font-size: 30px;
+    background-color: #77017F !important;
+    border: none;
+    padding-left: 3px;
+}
+
+.navbar {
+    background-color: #77017F !important;
+    border: none;
+    padding: 7px;
+}
+
+.pageNav {
+    color: white !important;
+    font-size: 22px;
+    font-family: 'Baloo Bhaina', cursive;
+    text-decoration: none;
+    position: relative;
+    top: 15px;
+    right: 15px;
+}
+
+.dropdownStyle {
+    background-color: #77017F !important;
+    border: none;
+}
+
+footer {
+    color:whitesmoke;
+    margin-top: 100px !important;
+    background-color: #77017F !important;
+    border: none;
+    font-family: 'Marck Script', cursive;
+    font-size: 20px;
+}
+.TitleFeed{
+    font-size: 40px !important;
+    color:white !important;
+    
+}
+
+/*rgba(184, 146, 242,0.5);*/

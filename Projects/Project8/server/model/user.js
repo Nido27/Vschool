@@ -39,11 +39,13 @@ var userSchema = new Schema({
         require: true,
         unique: true
     },
-   privilege: {
+    privilege: {
         type: String,
         enum: ["Admin", "User"],
         default: "User"
     }
+//    Contactus: [String],
+//    FeedBack: [String]
 });
 
 module.exports = mongoose.model('User', userSchema);

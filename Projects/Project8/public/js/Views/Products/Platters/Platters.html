@@ -1,103 +1,105 @@
 <div class="row" ng-init="loadData()">
-    <div class="col-md-10 col-md-offset-1">
-        <!-- status -->
+    <div class="col-md-12 col-md-offset-1">
+        <div class="col-md-8 col-md-offset-1">
+            <p class="titleBreakfast"> Platters Menu</p>
+        </div>
         <div ng-repeat="item in PlattersItem  | orderBy :sort :true">
             <div ng-if="item.type =='Platters'">
-                <div class="col-md-6">
+              <div class="col-md-5 backBreakFast">
                     <div class="row">
                         <div class="col-md-8" ng-if="!item.isShowingEdit">
                             <div class="col-md-12 col-md-offset-3">
-                                <img ng-src="{{item.image}}" class="postImg img-responsive">
+                                <img ng-src="{{item.image}}" class="postImg img-responsive imgBreak">
                             </div>
-                            <div class="col-md-12 col-md-offset-1">
+                            <div class="col-md-12 col-md-offset-1 Breaktitle">
                                 <!-- add the get by id later-->
-                                <a href="#/onePost/{{item._id}}">
+                                <a href="#/onePost/{{item._id}}"  class="Breaktitle">
                                     <p>{{item.name}}</p>
                                 </a>
                             </div>
-                            <div class="col-md-8 col-md-offset-1">
+                            <div class="col-md-8 col-md-offset-1 desBreak">
                                 <p>{{item.description}}</p>
                             </div>
                         </div>
-                        <div class="col-md-1 col-md-offset-3" ng-if="!item.isShowingEdit">
+                        <div class="col-md-1 col-md-offset-2" ng-if="!item.isShowingEdit">
                             <!--Delete Part-->
                             <button ng-click="deleteItem(item._id)" class="btn btn-danger" title="Remove" ng-if="priv == 'Admin'">X</button>
                         </div>
                         <div class="row">
                             <div class="col-md-10 col-md-offset-1">
                                 <div ng-if="item.isShowingEdit">
-                                    <div class="col-md-1 col-md-offset-12">
+                                    <div class="col-md-1 col-md-offset-11">
                                         <!--Delete Part-->
                                         <button ng-click="deleteItem(item._id)" class="btn btn-danger" title="Remove" ng-if="priv == 'Admin'">X</button>
                                     </div>
                                     <input ng-model="item.name" class="form-control">
                                     <input ng-model="item.image" class="form-control">
                                     <select ng-model="item.typeTemp" class="form-control">
-                                            <option>{{item.type}}</option>
-                                            <option value="Breakfast">Breakfast</option>
-                                            <option value="Desserts">Desserts</option>
-                                            <option value="JuiceAndIceCream">Juice & IceCream</option>
-                                            <option value="Platters">Platters</option>
-                                            <option value="Sandwish">Sandwish</option>
-                                        </select>
-                                    <textarea ng-model="item.description" class="form-control"></textarea>
+                                        <option>{{item.type}}</option>
+                                        <option value="Breakfast">Breakfast</option>
+                                        <option value="Desserts">Desserts</option>
+                                        <option value="JuiceAndIceCream">Juice & IceCream</option>
+                                        <option value="Platters">Platters</option>
+                                        <option value="Sandwish">Sandwish</option>
+                                    </select>
+                                    <textarea ng-model="item.description" class="form-control breakdesComt"></textarea>
                                     <div class="col-md-8 col-md-offset-11">
-                                        <button ng-click="edit(item._id);editType(item._id)" class="glyphicon glyphicon-pencil btn btn-success"></button>
+                                        <button ng-click="edit(item._id);editType(item._id)" class="btn btn-success">Save</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-5 col-md-offset-9">
-                            <div class="col-md-4">
+              <div class="row">
+                        <div class="col-md-12 col-md-offset-7 ">
+                            <div class="col-md-5 col-md-pull-2 likeBreak">
                                 <!--like button-->
                                 <div class="button-area">
-                                    <label>{{item.upVoted}}</label>
-                                    <button class="btn btn-danger glyphicon glyphicon-thumbs-up" ng-click="like(item._id)" title="Like"></button>
+                                    <label ng-show="token">{{item.upVoted}}</label>
+                                    <button class="btn btn-danger glyphicon glyphicon-thumbs-up" ng-click="like(item._id)" title="Like" ng-show="token"></button>
                                 </div>
                             </div>
-                            <div class="col-md-5 col-md-pull-1">
-                                <!--unlike button-->
-                                <div class="button-area">
-                                    <label>{{item.downVoted}}</label>
-                                    <button class="btn btn-danger glyphicon glyphicon-thumbs-down" ng-click="unlike(item._id)" title="unLike"></button>
+                                <div class="col-md-5 col-md-pull-5 unlikeBreak">
+                                    <!--unlike button-->
+                                    <div class="button-area">
+                                        <label ng-show="token">{{item.downVoted}}</label>
+                                        <button class="btn btn-danger glyphicon glyphicon-thumbs-down" ng-click="unlike(item._id)" title="unLike" ng-show="token"></button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
                     <div class="row">
                         <div class="col-md-2 col-md-offset-1">
                             <!--add a comment -->
-                            <button ng-click="showHideAddComment(item._id)" class="btn btn-warning" title="Add">Add Comment</button>
+                            <button ng-click="showHideAddComment(item._id)" class="btn btn-warning btnBreak" title="Add" ng-show="token">Add Comment</button>
                         </div>
                         <div class="col-md-2 col-md-offset-2">
                             <!--  show Comments-->
-                            <button ng-click="showHideComment(item._id)" class="btn btn-warning" title="Show">Show Comment</button>
+                            <button ng-click="showHideComment(item._id)" class="btn btn-warning btnBreak" title="Show" ng-show="token">Show Comment</button>
                         </div>
-                          <div class="col-md-2 col-md-offset-2" ng-if="priv == 'Admin'">
+                        <div class="col-md-2 col-md-offset-2" ng-if="priv == 'Admin'">
                             <!--edit part-->
-                            <button ng-click="editShowing(item._id)" class="btn btn-warning" title="Edit" >Edit</button>
+                            <button ng-click="editShowing(item._id)" class="btn btn-warning btnBreak" title="Edit">Edit</button>
                         </div>
                     </div>
                     <!--add Comment part-->
                     <div class="row">
                         <div class="col-md-8 col-md-offset-1">
                             <div ng-if="item.isShowingAddComment">
-                                <textarea ng-model="commentTxt" placeholder="Enter a Comment" class="form-control" placeholder="Enter a Comment"></textarea>
+                                <textarea ng-model="commentTxt" placeholder="Enter a Comment" class="form-control breakdesComt" placeholder="Enter a Comment"></textarea>
                                 <div class="col-md-9 col-md-offset-11">
-                                    <button ng-click="addComment(item._id, commentTxt);showHideAddComment()" class="glyphicon glyphicon-plus btn btn-warning" title="Add"></button>
+                                    <button ng-click="addComment(item._id, commentTxt);showHideAddComment()" class="glyphicon glyphicon-plus btn btn-warning btnBreak" title="Add"></button>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!--Show Comment Part -->
-                    <div class="row">
+                    <div class="row commentrowbreak">
                         <div class="col-md-12 col-md-offset-1">
                             <div ng-repeat="comment in item.Comment track by $index">
                                 <div ng-if="item.isShowingComment">
                                     <div class="col-md-8">
-                                        <p>{{comment}}</p>
+                                        <p class="BreakComment">{{comment}}</p>
                                     </div>
                                     <div class="col-md-2 col-md-pull-1">
                                         <button ng-click="removeComment(item._id, $index)" class="glyphicon glyphicon-trash btn btn-danger" title="Remove"></button>

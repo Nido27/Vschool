@@ -1,0 +1,81 @@
+<div class="row">
+    <div class="col-md-8 col-md-offset-2">
+        <p class="title">Website Role</p>
+    </div>
+</div>
+    <div class="col-md-12 col-md-offset-1 ">
+       <div class=col-md-6>
+         <button ng-click="Showadmin()" class="BtnRole">Show Admins</button>  
+       </div>
+          <div class=col-md-6>
+        <button ng-click="ShowUser()" class="BtnRole">Show Users</button>
+        </div>    
+    </div>
+<div class="row" ng-init="RoleOption()">
+    <div class="col-md-12 col-md-offset-1" ng-model="UserRole" ng-if="UserRole" ng-init="updateUser()">
+        <div ng-repeat="User in Users">
+            <div ng-if="User.privilege =='User'">
+                <div class="col-md-5 backBreakFast" ng-init="loadUser()">
+                    <div class="row">
+                        <div class="col-md-8" ng-if="!item.isShowingEdit">
+                            <div class="col-md-8 col-md-offset-5 desBreak">
+                                <img ng-src="{{User.image}}" class="img-responsive RoleImg">
+                            </div>
+                            <div class="col-md-12 col-md-offset-7 Breaktitle">
+                                <p class="Breaktitle">{{User.Username}}</p>
+                            </div>
+                            <div class="col-md-8 col-md-offset-7 desBreak">
+                                <p>{{User.privilege}}</p>
+                            </div>
+                            <div class="row SignBtnPos">
+                                <div class="col-md-8 col-md-offset-4">
+                                    <select ng-model="User.privilegeTemp" class="form-control">
+                                        <option value="">---Select Role ---</option>
+                                        <option value="Admin">Admin</option>
+                                        <option value="User">User</option>
+                                    </select>
+                                </div>
+                                   <div class="col-md-8 col-md-offset-4 btnRolePos">
+                                    <button ng-click="makeAdmin($index)" class="btn btn-danger form-control btnSign">Submit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  <div class="col-md-12 col-md-offset-1" ng-model="AdminRole" ng-if="AdminRole" ng-init="updateUser()">
+        <div ng-repeat="User in Users">
+            <div ng-if="User.privilege =='Admin'">
+                <div class="col-md-5 backBreakFast" ng-init="loadUser()">
+                    <div class="row">
+                        <div class="col-md-8" ng-if="!item.isShowingEdit">
+                            <div class="col-md-8 col-md-offset-5 desBreak">
+                                <img ng-src="{{User.image}}" class="img-responsive RoleImg">
+                            </div>
+                            <div class="col-md-12 col-md-offset-7 Breaktitle">
+                                <p class="Breaktitle">{{User.Username}}</p>
+                            </div>
+                            <div class="col-md-8 col-md-offset-7 desBreak">
+                                <p>{{User.privilege}}</p>
+                            </div>
+                            <div class="row SignBtnPos">
+                                <div class="col-md-8 col-md-offset-4">
+                                    <select ng-model="User.privilegeTemp" class="form-control">
+                                        <option value="">---Select Role ---</option>
+                                        <option value="Admin">Admin</option>
+                                        <option value="User">User</option>
+                                    </select>
+                                </div>
+                                   <div class="col-md-8 col-md-offset-4 btnRolePos">
+                                    <button ng-click="makeAdmin($index)" class="btn btn-danger form-control btnSign">Make Admin</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,4 +1,4 @@
-var app = angular.module("app.Sandwish", ["ngRoute", "todoReqModule", "privModule"]);
+var app = angular.module("app.Sandwish", ["ngRoute", "todoReqModule", "privModule" ,"tokenModule"]);
 app.config(function ($routeProvider) {
     $routeProvider.when("/Sandwish", {
         templateUrl: "/js/Views/Products/Sandwish/Sandwish.html",
@@ -6,7 +6,7 @@ app.config(function ($routeProvider) {
     })
 })
 
-app.controller("SandwishCtrl", function ($scope, todoReq, privService) {
+app.controller("SandwishCtrl", function ($scope, todoReq, TokenService, privService) {
     $scope.SandwishItem = [];
      $scope.priv = privService.getPriv();
     $scope.sort = function (item) {

@@ -1,14 +1,92 @@
-<!--
+<div class="row">
+    <div class="col-md-12 col-md-offset-3">
+        <img src="/js/Views/Home/logo.gif" class="img-responsive logo">
+    </div>
+</div>
+<hr class="hr">
+<!--Video part-->
 <div class="row">
     <div class="col-md-12">
         <video autoplay loop width="100%">
             <source src="http://culinariafoodandwine.com/videos/culinaria.mp4" type="video/mp4">
         </video>
     </div>
-</div>-->
+</div>
+<hr class="hr">
+<!--background Image-->
+<div class="row backgroundColor">
+    <div class="col-md-3">
+        <p class="backLTitle">Food</p>
+        <p class="backSTitle">HM Resto</p>
+    </div>
+    <hr class="hrr">
+    <div class="col-md-7 col-md-offset-2 backText">
+        <p>From cooking in his mom's kitchen to a flourishing catering career, </p>
+        <p>Aaron has been doing this his whole life. His rich experience shows through beautiful,</p>
+        <p>flavorful and unpretentious food with a focus on local ingredients. </p>
+        <p>Together with Regan's expert wine and cocktail pairings, HM Resto offers one-of-a-kind catering.</p>
+    </div>
+</div>
+<hr class="hr">
+<div class="row">
+    <div class="col-md-12">
+        <img src="/js/Views/Home/picinhome.gif" class="imgborder img-responsive">
+    </div>
+</div>
+<div class="row ">
+    <div class="col-md-6 imgtextRow">
+        <p>Weddings, birthdays, Mitzvahs both Bar and Bat </p>
+        <p>our new space is great for intimate gatherings of friends and</p>
+        <p>families. When you're with us, you'll feel like you're home. Take a look around!</p>
+    </div>
+    <div class="col-md-5 imgtextRow">
+        <p>We love entertaining and will take any opportunity to do so. </p>
+        <p>If you already have a space picked out, we're happy to host.</p>
+        <p>If it's important to you, it's important to us. We'll work to make it perfect.</p>
+    </div>
+</div>
+<hr class="hr">
+<div class="row" ng-init="Option()">
+    <div class="col-md-10">
+        <div class="col-md-12" ng-model="SmallPlates" ng-if="SmallPlates">
+             <div class="col-md-5 col-md-offset-4  btnTexttitle">
+                <p class="titleinbox">Small Plates</p>
+            </div>
+            <div class="col-md-offset-2">
+                <img src="//d1qmdf3vop2l07.cloudfront.net/khaki-deer.cloudvent.net/compressed/0f7dc2ad5aa956f41e49699a5c6540f7.png" class="img-responsive btnImg">
+            </div>
+            <div>
+                <p class="btnTextTxt">You're not just another veggie tray to HM Resto. Even if you don't need a full dinner service, we can provide delicious and inventive small plates that are sure to impress your guests.</p>
+            </div>
 
-
-<h1>Home</h1>
-
-
-<button ng-click="signOut()">Sign Out</button>
+        </div>
+        <div class="col-md-12" ng-model="BarService" ng-if="BarService">
+             <div class="col-md-5 col-md-offset-4 btnTexttitle">
+                <p class="titleinbox">Bar Service</p>
+            </div>
+            <div class="col-md-offset-2">
+                <img src="//d1qmdf3vop2l07.cloudfront.net/khaki-deer.cloudvent.net/compressed/31d102d1079bf5d2830a2ae9ea7fb015.png" class="img-responsive btnImg">
+            </div>
+            <div>
+                <p class="btnTextTxt">From fun, innovative cocktails to expert wine pairings, we also offer a completely customizable bar service. Fully licensed and insured, we’ll bring the craft bar experience to your next special event with or without our catering services.</p>
+            </div>
+        </div>
+        <div class="col-md-12" ng-model="Catering" ng-if="Catering">
+            <div class="col-md-6 col-md-offset-4 btnTexttitle">
+                <p class="titleinbox">The Catering</p>
+            </div>
+            <div class="col-md-offset-2">
+                <img src="//d1qmdf3vop2l07.cloudfront.net/khaki-deer.cloudvent.net/compressed/d66cfdcce6361094b2a11cc43bfa6a6f.png" class="img-responsive btnImg">
+            </div>
+            <div>
+                <p class="btnTextTxt">HM Resto offers a completely unique, full-service catering experience. Starting with a comprehensive plan for your special day, we will ensure the event captures your personality...the HM Resto way. Our friendly, professional team will bring your vision to life while you relax and enjoy a delicious experience with family and friends.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-2 buttonPositon">
+        <button ng-click="ShowSmallPlates()" class="btnOption">Small Plates</button>
+        <button ng-click="ShowBarService()" class="btnOption">Bar Service</button>
+        <button ng-click="ShowCatering()" class="btnOption">The Catering</button>
+    </div>
+</div>
+<hr class="hr">

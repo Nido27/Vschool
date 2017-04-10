@@ -1,12 +1,27 @@
 <div class="row">
-    <label>Username :</label>
-    <input type="text" name="Username" placeholder="Username" ng-model="userinput.Username" />
+    <div class="col-md-8 col-md-offset-2">
+        <p class="title">Sign in to Get more Features</p>
+    </div>
 </div>
-<div class="row">
-    <label>Password :</label>
-    <input type="Password" name="Password" placeholder="Password" ng-model="userinput.Password" />
-</div>
-
 <div>
-    <button ng-click="signin()">signin</button>
+    <div class="row signRow">
+       <div class="col-md-4 col-md-offset-4 signinback">
+        <div class="col-md-7">
+            <label>Username :</label>
+            <input type="text" name="Username" placeholder="Username" ng-model="userinput.Username" class="SignInpt" />
+        </div>
+           <div class="col-md-6 col-md-pul-1">
+            <label>Password :</label>
+            <input type="Password" name="Password" placeholder="Password" ng-model="userinput.Password"class="SignInpt" />
+        </div>
+        <div>
+            <div class="row SignBtnPos">
+              <div class="col-md-4 col-md-offset-4">
+                <button ng-click="signin()" class="btn btn-danger form-control btnSign">Sign in</button>
+            </div>
+            </div>
+        </div>
+        <label class="wrongInput">{{userErr}}</label>
+    </div>
+</div>
 </div>

@@ -1,4 +1,4 @@
-var app = angular.module("app.addItem", ["ngRoute", "todoReqModule"]);
+var app = angular.module("app.addItem", ["ngRoute", "todoReqModule", "privModule" ,"tokenModule"]);
 app.config(function ($routeProvider) {
     $routeProvider.when("/addItem", {
         templateUrl: "/js/Views/Products/addItem/addItem.html",
@@ -7,7 +7,7 @@ app.config(function ($routeProvider) {
 })
 
 
-app.controller("addItemCtrl", function ($scope, todoReq) {
+app.controller("addItemCtrl", function ($scope, todoReq, TokenService, privService) {
 
        $scope.sort = function (item) {
         return item.upVoted - item.downVoted;
@@ -71,5 +71,6 @@ app.controller("addItemCtrl", function ($scope, todoReq) {
         $scope.description = "";
         $scope.type = "Select type";
     }
+
 
 })
