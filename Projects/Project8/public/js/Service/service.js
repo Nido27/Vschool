@@ -78,26 +78,7 @@ app.service("todoReq", function ($http) {
         }
         return $http.put("http://localhost:8080/restoMenu/" + id + "?" + stringComment);
     }
-//    this.feedback = function (id, data) {
-//        var stringfeedback = "";
-//        for (key in data) {
-//            stringfeedback += key;
-//            stringfeedback += "=";
-//            stringfeedback += data[key];
-//            stringfeedback += "&"
-//        }
-//        return $http.put("http://localhost:8080/User/" + id + "?" + stringfeedback);
-//    }
-//    this.contactUs = function (id, data) {
-//        var stringContactUs = "";
-//        for (key in data) {
-//            stringContactUs += key;
-//            stringContactUs += "=";
-//            stringContactUs += data[key];
-//            stringContactUs += "&"
-//        }
-//        return $http.put("http://localhost:8080/User/" + id + "?" + stringContactUs);
-//    }
+
 
     this.removeComment = function (id) {
         return $http.delete("http://localhost:8080/restoMenu/" + id);

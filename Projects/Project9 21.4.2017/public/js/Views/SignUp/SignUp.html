@@ -1,0 +1,85 @@
+<div class="row">
+    <div class="col-md-6 col-md-offset-3 titlePost">
+        <p class="title">Join Us at HM Resto</p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-8 col-md-offset-2 signUPback">
+        <div class="row">
+            <div class="col-md-4 col-md-offset-1">
+                <label>First Name :</label>
+                <input class="form-control" type="text" name="First Name" placeholder="First Name" ng-model="userinput.firstName" />
+            </div>
+            <div class="col-md-4 col-md-offset-2">
+                <label>Last Name :</label>
+                <input class="form-control" type="text" name="Last Name" placeholder="Last Name" ng-model="userinput.lastName" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 col-md-offset-1">
+                <label>Email :</label>
+                <input class="form-control" type="text" name="Email" placeholder="Email" ng-model="userinput.Email" />
+            </div>
+            <div class="col-md-4 col-md-offset-2">
+                <label>Username :</label>
+                <input class="form-control" type="text" name="Username" placeholder="Username" ng-model="userinput.Username" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 col-md-offset-1">
+                <label>Password :</label>
+                <input class="form-control" type="Password" name="Password" placeholder="Password" ng-model="userinput.Password" />
+            </div>
+            <div class="col-md-4 col-md-offset-2">
+                <label>Comfirm Password :</label>
+                <input class="form-control" type="Password" name="Password2" placeholder="Comfirm Password" ng-model="userinput.Password2" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 col-md-offset-1">
+                <label>Country</label>
+                <select class="form-control" name="country" ng-model="userinput.Country">
+                    <option value="">---Select Country---</option>
+                    <option value="Brazil">Brazil</option>
+                    <option value="Canada">Canada</option>
+                    <option value="China">China</option>
+                    <option value="France">France</option>
+                    <option value="Germany">Germany</option>
+                    <option value="Greek">Greek</option>
+                    <option value="Italy">Italy</option>
+                    <option value="Japan">Japan</option>
+                    <option value="Lebanon">Lebanon</option>
+                    <option value="Spain">Spain</option>
+                    <option value="UK">UK</option>
+                    <option value="USA">USA</option>
+                </select>
+            </div>
+            <div class="col-md-4 col-md-offset-2">
+                <label>Birthday Date :</label>
+                <input class="form-control" type="date" name="Birthday Date" ng-model="userinput.age" />
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4 col-md-offset-1">
+                <label> Gender :</label>
+                <br/>
+                <input type="radio" name="gender" value="Male" ng-model="userinput.Gender" /> <span class="genderInput">Male</span>
+                <input type="radio" name="gender" value="Female" ng-model="userinput.Gender" /><span class="genderInput">Female</span>
+            </div>
+            <div class="col-md-4 col-md-offset-2">
+                <label>Profile Image :</label>
+                <input class="form-control" type="text" name="ProfileImage" placeholder="Profile Image" ng-model="userinput.image" />
+            </div>
+        </div>
+        <div class="col-md-12 buttonPos">
+            <div class="col-md-4 col-md-offset-2">
+            <button ng-click="signup()" ng-disabled="validate()" class="btn btn-success form-control btnText">Submit</button>
+            </div>
+             <div class="col-md-4">
+            <button ng-click="Reset()" class="btn btn-danger form-control btnText">Reset</button>
+        </div>
+    </div>
+</div>
+</div>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Chewy|Gloria+Hallelujah|Handlee|Macondo|Marck+Script|Palanquin+Dark|Roboto+Slab|Russo+One" rel="stylesheet">
+
+</head>
+
+<body ng-app="myApp" ng-controller="Index">
+    <nav class="navbar navbar-inverse navbar-fixed-button" >
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="#/Home" class="navtitle">تعوزرونا</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar"  ng-init="navref()">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#/Home" class="text">Home</a></li>
+                    <li ng-if="priv == 'Admin'"><a href="#/addOffear" class="text"> Add Offear</a></li>
+                    <li ng-if="priv == 'Admin'"><a href="#/addHotel" class="text"> Add Hotel</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle text" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">Season Offears <span class="caret"></span></a>
+                        <ul class="dropdown-menu dropdownStyle" id="dropdown">
+                            <li><a href="#/Fall" class="text">Fall</a></li>
+                            <li><a href="#/Spring" class="text">Spring</a></li>
+                            <li><a href="#/Summer" class="text">Summer</a></li>
+                            <li><a href="#/Winter" class="text">Winter</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#/Hotel" class="text">Hotel</a></li>
+                    <li ng-show="!token"><a href="#/SignUp" class="text">Registration</a></li>
+                    <li ng-show="!token"><a href="#/Signin" class="text">Signin</a></li>
+                    <li ng-if="priv == 'Admin'"><a href="#/AdminRole" class="text">Admin Role</a></li>
+                    <li ng-show="token" class="signOutBtn">
+                        <button ng-click="signOut()" class="glyphicon glyphicon-off signOutBtn"></button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <ng-view></ng-view>
+    </div>
+    <footer>
+        <div id="footer">
+            <div class="container">
+                <div class="row">
+                    <h3 class="footertext">About Us:</h3>
+                    <br>
+                    <div class="col-md-4">
+                        <center>
+<!--                            <img src="/view/Chef-2-icon.png" width="100px" class="img-circle" alt="the-brains">-->
+                            <br>
+                            <h4 class="footertext">Chef</h4>
+                            <p class="footertext">You can thank all the crazy food here to this guy.
+                                <br>
+                        </center>
+                    </div>
+                    <div class="col-md-4">
+                        <center>
+<!--                            <img src="/view/stove-512.png" width="100px" class="img-circle" alt="...">-->
+                            <br>
+                            <h4 class="footertext">Cooker</h4>
+                            <p class="footertext">All the Food here are bake done by this Cooker.
+                                <br>
+                        </center>
+                    </div>
+                    <div class="col-md-4">
+                        <center>
+<!--                            <img src="/view/cleaner.png"  width="100px" class="img-circle" alt="...">-->
+                            <br>
+                            <h4 class="footertext">Cleaner</h4>
+                            <p class="footertext">This clean place and the good smell it holds are all thanks to this woman.
+                                <br>
+                        </center>
+                    </div>
+                </div>
+                <div class="row">
+                    <p>
+                        <center>
+                            <p class="footertext">	&copy; HM Resto -- All Rights Reserved Privacy PolicyTerms and Conditions </p>
+                        </center>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--    <script src="https://use.fontawesome.com/d266474e8d.js"></script>-->
+    <script src="https://code.angularjs.org/1.6.2/angular.min.js"></script>
+    <script src="https://code.angularjs.org/1.6.2/angular-route.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="../js/Service/service.js"></script>
+    <script src="../js/Service/auth.js"></script>
+    <script src="../js/Service/token.js"></script>
+    <script src="../js/Service/priv.js"></script>
+    <script src="../js/Views/AdminRole/AdminRole.js"></script>
+    <script src="../js/Views/Home/Home.js"></script>
+    <script src="../js/Views/SignUp/SignUp.js"></script>
+    <script src="../js/Views/signIn/signin.js"></script>
+    <script src="../js/Views/addHotel/addhotel.js"></script>
+     <script src="../js/Views/addOffear/addOffear.js"></script>
+     <script src="../js/Views/Season/Fall/Fall.js"></script>
+     <script src="../js/Views/Season/Spring/Spring.js"></script>
+     <script src="../js/Views/Season/Summer/Summer.js"></script>
+     <script src="../js/Views/Season/Winter/Winter.js"></script>
+     <script src="../js/Views/Hotels/Hotels.js"></script>
+</body>
+
+</html>

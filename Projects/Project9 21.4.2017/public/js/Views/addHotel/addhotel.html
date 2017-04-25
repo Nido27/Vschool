@@ -1,0 +1,30 @@
+<div class="row">
+    <div class="col-md-8 col-md-offset-2 titlePost">
+        <p> Share Your Favorites Active With Us</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6 col-md-offset-4">
+        <!--add Part-->
+        <div class="row">
+            <div class="col-md-12 col-md-pull-2 PostBack">
+                <div>
+                    <input ng-model="image" placeholder="Enter image of hotel" class="form-control">
+                    <input ng-model="name" placeholder="Enter name of hotel" class="form-control ">
+                    <select ng-model="Season" class="form-control">
+                       <option value="" selected="selected">Select Season </option>
+                        <option value="Fall">Fall</option>
+                        <option value="Winter">Winter</option>
+                        <option value="Spring">Spring</option>
+                        <option value="Summer">Summer</option>
+                    </select>
+                    <textarea ng-model="description" placeholder="Enter a description of hotel" class="form-control"></textarea>
+                    <input ng-model="price" placeholder="Enter a price of hotel per Night" type="Number" min="0" class="form-control ">
+                    <div class="col-md-3 col-md-offset-10">
+                        <a href="#/Hotel" id="btn-warning"><button ng-click="addHotel();addStatus()" class="btn btn-warning">Publish</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
