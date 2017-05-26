@@ -1,0 +1,36 @@
+.SeasonTitle {
+font-family: 'Oleo Script', cursive;
+    font-size: 80px;
+    color: black;
+    border-radius: 20px;
+    background-color: rgba(175, 188, 206, 0.5);
+    padding: 3%;
+    text-align: center;
+    margin-top: 5%;
+}
+
+.TitleitemSeason {
+    font-family: 'Special Elite', cursive;
+    font-size: 30px;
+    color: black;
+}
+
+.DscitemSeason {
+    font-family: 'Special Elite', cursive;
+    font-size: 30px;
+    color: black;
+}
+
+.commentTxtSeason{
+    color:darkblue;
+    font-size: 18px;
+    font-family: 'Bree Serif', serif;
+}
+
+
+.SeasonEditstyle {
+    font-size: 20px;
+    color: white;
+    background-color: rgba(72, 72, 72, 0.5);
+    font-family: 'Neucha', cursive;
+}

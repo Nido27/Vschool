@@ -1,0 +1,90 @@
+.hotelTitle {
+    font-family: 'Love Ya Like A Sister', cursive;
+    font-size: 80px;
+    color: darkblue;
+    border-radius: 20px;
+    background-color: rgba(158, 179, 196, 0.5);
+    padding: 3%;
+    text-align: center;
+    margin-top: 5%;
+}
+
+.hotelBackgroundItem {
+    background-color: rgba(87, 112, 151, 0.5);
+    margin: 5px;
+    border-radius: 60px;
+    padding: 35px;
+    height: 590px;
+    overflow-x: hidden;
+    margin-left: 80px;
+}
+
+.imgHotel {
+    margin-top: 2%;
+    border: white solid 3px;
+    border-radius: 20px;
+    width: 100%;
+}
+
+.hotelName {
+    font-size: 30px;
+    color: darkblue;
+    font-family: 'Special Elite', cursive;
+    margin-top: 2%;
+}
+
+.hotelDsc {
+    font-size: 20px;
+    color: white;
+    font-family: 'Passion One', cursive;
+    margin-top: 2%;
+}
+
+.hotelDsc1{
+  font-size: 20px;
+    color: black;
+    font-family: 'Passion One', cursive;
+    margin-top: 2%;  
+}
+.hotelEditstyle {
+    font-size: 20px;
+    color: wheat;
+    background-color: rgba(72, 72, 72, 0.5);
+    font-family: 'Neucha', cursive;
+}
+
+
+.addCommentHotelStyle {
+    font-size: 20px;
+    color: wheat;
+    background-color: rgba(72, 72, 72, 0.5);
+    font-family: 'Neucha', cursive;
+    margin-top: 3%;
+}
+
+
+.hotelEditinput {
+    margin-top: 3%;
+}
+
+.btnHotlpadding {
+    padding: 1%;
+}
+
+.likeStyle {
+    font-size: 30px;
+    font-family: 'Passion One', cursive;
+    color: aliceblue;
+}
+
+.hotelStyleBtn {
+    padding: 2px !important;
+    font-size: 18px;
+    font-family: 'Bree Serif', serif;
+}
+
+.commentTxtHotel{
+    color:white;
+    font-size: 18px;
+    font-family: 'Bree Serif', serif;
+}

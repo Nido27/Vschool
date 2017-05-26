@@ -1,0 +1,191 @@
+<div class="container">
+    <div class="row">
+    <div class="col-md-6">
+      
+
+                    <button class="buttonadmin" ng-click="Showadmin()">Show Admins</button>
+         
+    </div>
+    <div class="col-md-6">
+        
+                    <button class="buttonadmin" ng-click="ShowUser()">Show Users</button>
+   
+    </div>
+
+
+
+</div>
+<div class="row" ng-init="RoleOption()">
+    <div>
+        <div ng-model="UserRole" ng-if="UserRole" ng-init="updateUser()">
+            <div ng-repeat="User in Users">
+                <div class="col-md-3" ng-if="User.privilege =='User'">
+                    <div ng-init="loadUser()">
+
+                        <div ng-if="!item.isShowingEdit">
+                            <div class="panel panel-default text-center">
+                                <div class="panel-heading">
+                                    <h1>
+                                        <p>{{User.Username}}</p>
+                                    </h1>
+                                </div>
+                                <div class="panel-body">
+                                    <a class="image" href="">
+                                        <img alt="HTC U Ultra" ng-src="{{User.image}}" width="152" height="150">
+                                    </a>
+                                    <p><strong><p>{{User.privilege}}</p></strong></p>
+                                    <p><strong></strong> </p>
+                                    <p><strong></strong> </p>
+                                    <p><strong></strong> </p>
+                                    <p><strong><select ng-model="User.privilegeTemp" class="form-control">
+                                        <option value="">---Select Role ---</option>
+                                        <option value="Admin">Admin</option>
+                                        <option value="User">User</option>
+                                    </select></strong></p>
+                                </div>
+                                <div class="panel-footer">
+                                    <button ng-click="makeAdmin($index)" class="btn btn-danger form-control btnSign">Make Admin</button>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div ng-model="AdminRole" ng-if="AdminRole" ng-init="updateUser()">
+            <div ng-repeat="User in Users">
+                <div class="col-md-3" ng-if="User.privilege =='Admin'">
+                    <div ng-init="loadUser()">
+                        <div class="panel panel-default text-center">
+                            <div ng-if="!item.isShowingEdit">
+                                <div class="panel panel-default text-center">
+                                    <div class="panel-heading">
+                                        <h1>
+                                            <p>{{User.Username}}</p>
+                                        </h1>
+                                    </div>
+                                    <div class="panel-body">
+                                        <a class="image" href="">
+                                            <img alt="HTC U Ultra" ng-src="{{User.image}}" width="150" height="150">
+                                        </a>
+                                        <p><strong><p>{{User.privilege}}</p></strong></p>
+                                        <p><strong></strong> </p>
+                                        <p><strong></strong> </p>
+                                        <p><strong></strong> </p>
+                                        <p><strong><select ng-model="User.privilegeTemp" class="form-control">
+                                        <option value="">---Select Role ---</option>
+                                        <option value="Admin">Admin</option>
+                                        <option value="User">User</option>
+                                    </select></strong></p>
+                                    </div>
+                                    <div class="panel-footer">
+                                        <button ng-click="makeAdmin($index)" class="btn btn-danger form-control btnSign">Make Admin</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</div>
+   
+
+<!--
+<div class="row">
+    <div class="col-md-8 col-md-offset-2">
+        <p class="title">Website Role</p>
+    </div>
+</div>
+<nav class="navbar navbar-inverse navbar-fixed-button" id="BtnRole"> 
+      <ul class="nav navbar-nav navbar-right">
+             <li >
+        <a ng-click="Showadmin()">Show Admins</a>
+    </li>
+    <li >
+        <a ng-click="ShowUser()">Show Users</a>
+    </li>
+      </ul>
+    
+    </nav>
+
+
+-->
+
+
+
+<!--
+
+<div class="row" ng-init="RoleOption()">
+    <div  ng-model="UserRole" ng-if="UserRole" ng-init="updateUser()">
+        <div class="col-sm-3 col-xs-6" ng-repeat="User in Users">
+            <div ng-if="User.privilege =='User'">
+                <div ng-init="loadUser()">
+                    <div class="panel panel-default text-center" ng-if="!item.isShowingEdit">
+                        <div class="panel-heading">
+                            <h1>
+                                <p>{{User.Username}}</p>
+                            </h1>
+                        </div>
+                        <div class="panel-body">
+                            <a class="image" href="">
+                                <img alt="HTC U Ultra" ng-src="{{User.image}}">
+                            </a>
+                            <p><strong><p>{{User.privilege}}</p></strong></p>
+                            <p><strong></strong> </p>
+                            <p><strong></strong> </p>
+                            <p><strong></strong> </p>
+                            <p><strong><select ng-model="User.privilegeTemp" class="form-control">
+                                        <option value="">---Select Role ---</option>
+                                        <option value="Admin">Admin</option>
+                                        <option value="User">User</option>
+                                    </select></strong></p>
+                        </div>
+                        <div class="panel-footer">
+                            <button ng-click="makeAdmin($index)" class="btn btn-danger form-control btnSign">Make Admin</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12 col-md-offset-1" ng-model="AdminRole" ng-if="AdminRole" ng-init="updateUser()">
+        <div ng-repeat="User in Users">
+            <div ng-if="User.privilege =='Admin'">
+                <div class="col-md-5 backBreakFast" ng-init="loadUser()">
+                    <div class="row">
+                        <div class="col-md-8" ng-if="!item.isShowingEdit">
+                            <div class="col-md-8 col-md-offset-5 desBreak">
+                                <img ng-src="{{User.image}}" class="img-responsive RoleImg">
+                            </div>
+                            <div class="col-md-12 col-md-offset-7 Breaktitle">
+                                <p class="Breaktitle">{{User.Username}}</p>
+                            </div>
+                            <div class="col-md-8 col-md-offset-7 desBreak">
+                                <p>{{User.privilege}}</p>
+                            </div>
+                            <div class="row SignBtnPos">
+                                <div class="col-md-8 col-md-offset-4">
+                                    <select ng-model="User.privilegeTemp" class="form-control">
+                                        <option value="">---Select Role ---</option>
+                                        <option value="Admin">Admin</option>
+                                        <option value="User">User</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-8 col-md-offset-4 btnRolePos">
+                                    <button ng-click="makeAdmin($index)" class="btn btn-danger form-control btnSign">Make Admin</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>-->

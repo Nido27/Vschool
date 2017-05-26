@@ -1,0 +1,119 @@
+
+
+.bodyuser {
+    background-color: silver;
+    
+}
+#imagepart {
+    text-align: center;
+}
+.myAccountchangeBtn {
+       background-color: rgb(162, 163, 163);
+   border: none;
+    color: white;
+    padding: 8px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    width: 80%;
+}
+.myAccountchangeBtn:hover {
+     background-color: #1aafd0;
+    padding-right: 25px;
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+#myAccountTitle {
+    background-color: rgb(162, 163, 163);
+    text-align: center;
+height: 100px;
+border: 10px ;
+}
+/*
+.navbar {
+    margin-bottom: 0;
+}
+
+.myAccountTitle {
+    margin-top: 2%;
+    font-family: 'Bree Serif', serif;
+    font-size: 100px;
+    color: white;
+    border: solid white 10px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.myAccountChangeProfileImage {
+    font-size: 14px;
+    position: relative;
+    top: 10px;
+}
+
+.myAccountProfileImage {
+    width: 300px;
+    border-radius: 20px;
+    border: white solid 7px;
+}
+
+
+
+.myAccountchangeBtn {
+    background-color: rgba(0, 57, 123, 0.5) !important;
+    border-radius: 20px;
+    border: solid white 5px;
+    color: white !important;
+    font-size: 18px;
+    font-family: 'Bangers', cursive;
+    padding: 7px;
+}
+
+
+
+.myAccountLabelTitleImgePos {
+    position: relative;
+    top: 60px;
+}
+
+.myAccountLabelTitle {
+    font-family: 'Acme', sans-serif;
+    font-size: 40px;
+    color: white;
+}
+
+.myAccountText {
+    font-family: 'Acme', sans-serif;
+    font-size: 30px;
+    color: white;
+}
+
+.myAccountSaveCanelBtn {
+    font-size: 15px;
+    font-family: 'Fredoka One', cursive;
+    border: white 2px solid;
+    border-radius: 7px white solid;
+}
+
+.myAccountSInput {
+    background-color: rgba(255, 255, 255, 0.5);
+    font-family: 'Bree Serif', serif;
+    font-size: 20px;
+    color: yellow;
+}
+*/
+
+.signUpTitle {
+    font-family: 'Alex Brush', cursive;
+    font-size: 60px;
+    color: black;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 3%;
+    text-align: center;
+    margin-top: 2%;
+}
+
+.signUpTxt {
+     font-family: 'Playball', cursive;
+        font-size: 20px;
+}

@@ -1,0 +1,134 @@
+.sliderstyle {
+    border: white 20px solid;
+    border-radius: 900px !important;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.homeTitleStyle {
+    font-family: 'Love Ya Like A Sister', cursive;
+    font-size: 80px;
+    color: black;
+    border-radius: 50px;
+    background-color: rgba(159, 159, 156, 0.5);
+    padding: 1%;
+    text-align: center;
+    margin-top: 5%;
+}
+
+.footerstyle {
+    font-family: 'Boogaloo', cursive;
+    color: white !important;
+    font-size: 30px;
+}
+
+.thumbnailhome {
+    display: block;
+    padding: 10px;
+    margin-bottom: 20px;
+    line-height: 1.42857143;
+    background-color: rgba(54, 56, 47, 0.5);
+    border-color: aliceblue;
+    border-radius: 9px;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.24);
+    margin-left: 70px!important;
+}
+
+.homeAboutUs {
+    display: block;
+    padding: 10px;
+    margin-bottom: 20px;
+    line-height: 1.42857143;
+    background-color: rgba(57, 57, 57, 0.5);
+    border-color: aliceblue;
+    border-radius: 9px;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.5);
+    font-family: 'Boogaloo', cursive;
+    font-size: 35px;
+    color: white;
+}
+
+.imgthumbanil {
+    border-radius: 200px;
+    width: 300px;
+}
+
+.thumbnailTitle {
+    font-family: 'Boogaloo', cursive;
+    color: white !important;
+    font-size: 60px;
+}
+
+.thumbnailDsc {
+    font-family: 'Patrick Hand', cursive;
+    color: white !important;
+    font-size: 18px;
+    margin-top: 8px;
+}
+
+.hrHome {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid grey;
+    margin: 1em 0;
+    padding: 0;
+}
+
+.hr {
+    border-width: 2px;
+    border-style: dotted;
+    color: rebeccapurple;
+}
+
+.hrr {
+    border-width: 1px;
+    border-style: solid;
+    color: white;
+    transform: rotate(90deg);
+    width: 300px;
+    position: relative;
+    top: 150px;
+    right: 180px;
+}
+
+.wht-go {
+    color: black;
+    font-family: 'Shrikhand', cursive;
+    font-size: 22px;
+}
+
+.introducationHome {
+    font-size: 20px;
+    color: black;
+    background-color: lavender;
+    border-radius: 300px;
+    font-family: 'Boogaloo', cursive;
+}
+
+.homeVideoStyle {
+    border: cadetblue solid 3px;
+
+    border-radius: 200px;
+    color: cadetblue
+}
+
+.videoHome {
+    margin-left: 50px !important;
+}
+
+.videTitle {
+    font-size:40px;
+    color: whitesmoke;
+    background-color: rgba(54, 56, 47, 0.5);
+    transform: rotate(-20deg);
+    padding: 10px;
+    border-radius: 20px;
+    position: relative;
+    top: 30px;
+    font-family: 'Shrikhand', cursive;
+}
+
+.regBtn{
+    font-size: 30px !important;
+}

@@ -1,0 +1,36 @@
+/*
+font-family: 'Inknut Antiqua', serif;
+font-family: 'Baloo', cursive;
+font-family: 'Love Ya Like A Sister', cursive;
+font-family: 'Anton', sans-serif;
+font-family: 'Cabin', sans-serif;
+font-family: 'Bree Serif', serif;
+font-family: 'Roboto Mono', monospace;
+font-family: 'Varela Round', sans-serif;
+font-family: 'Acme', sans-serif;
+font-family: 'Passion One', cursive;
+font-family: 'Righteous', cursive;
+font-family: 'Permanent Marker', cursive;
+font-family: 'Chewy', cursive;
+font-family: 'Shrikhand', cursive;
+font-family: 'Bangers', cursive;
+font-family: 'Playfair Display SC', serif;
+font-family: 'Boogaloo', cursive;
+font-family: 'Patrick Hand', cursive;
+font-family: 'Bad Script', cursive;
+font-family: 'Playball', cursive;
+font-family: 'Oleo Script', cursive;
+font-family: 'Fredoka One', cursive;
+font-family: 'Marck Script', cursive;
+font-family: 'Neucha', cursive;
+font-family: 'Special Elite', cursive;
+font-family: 'Gochi Hand', cursive;
+font-family: 'Alex Brush', cursive;
+*/
+
+.inputSignUp {
+    font-family: 'Special Elite', cursive;
+    background-color: rgba(159, 159, 156, 0.5);
+    color: white;
+    font-size: 20px;
+}

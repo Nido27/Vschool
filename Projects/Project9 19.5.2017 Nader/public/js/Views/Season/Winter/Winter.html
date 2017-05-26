@@ -1,0 +1,231 @@
+<div class="row" ng-init="loadData()">
+    <div class="col-md-5  col-md-offset-4">
+        <p class="SeasonTitle"> Winter offear</p>
+    </div>
+    <div class="container" ng-repeat="item in WinterItem  | orderBy :sort :true">
+        <div class="">
+            <div class="col-sm-10 col-md-12">
+                <div class="thumbnail" ng-if="item.Season =='Winter'">
+                    <div class="caption">
+                        <div ng-if="!isShowingEdit">
+                            <div class="row">
+                                <div class="col-md-7">
+                                    <img class="qwert" ng-src="{{item.image}}" width=450 height=200>
+                                </div>
+                                <div class="col-md-5">
+                                    <h3 class="TitleitemSeason">City: {{item.name}}</h3>
+                                    <p class="DscitemSeason">info : {{item.description}}</p>
+                                    <p class="DscitemSeason"> Location : {{item.location}}</p>
+                                    <p class="DscitemSeason">Cost : $ {{item.price}}</p>
+                                    <p><span id="start" class="glyphicon glyphicon-star-empty"></span>
+                                        <span id="start" class="glyphicon glyphicon-star"></span>
+                                        <span id="start" class="{{star}}"></span>
+                                        <span id="start" class="{{star}}"></span>
+                                        <span id="start" class="{{star}}"></span></p>
+                                </div>
+                                <div class="col-md-3">
+                                    <div ng-repeat="comment in item.Comment track by $index">
+                                        <div ng-if="item.isShowingComment">
+                                            <div class="col-md-12">
+                                                <p class="commentTxtSeason">
+                                                    <button ng-click="removeComment(item._id, $index)" class="glyphicon glyphicon-trash Remove" title="Remove"></button> {{comment}} </p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <hr/>
+                            <div class=""></div>
+                            <div class="col-md-3 btn-group" id="">
+                                <button id="voted" class="btn btn-danger glyphicon glyphicon-thumbs-up" ng-show="token" ng-click="like(item._id)" title="Like" ng-show="token"><span class="badge"> {{ item.upVoted}}</span></button>
+                                <button id="voted" class="btn btn-danger glyphicon glyphicon-thumbs-down" ng-show="token" ng-click="unlike(item._id)" title="unLike" ng-show="token"><span class="badge"> {{ item.downVoted}}</span></button>
+                            </div>
+                            <div class="col-md-3">
+                                <button ng-click="showHideComment(item._id)" class="btn btn-warning btn-lg" title="Show" ng-show="token">Show Comment</button>
+                            </div>
+                            <div class="col-md-3">
+                                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModalAddComment" ng-click="selectItem(item)">Comment</button>
+                            </div>
+                            <div class="col-md-2 " ng-if="priv == 'Admin'">
+                                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModalEdit" ng-click="editShowing(item._id);selectItem(item)">Edit</button>
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 col-md-offset-1">
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!--
+                    <div class="row">
+                        <div class="col-md-8" ng-if="!isShowingEdit">
+                            <div class="col-md-12 col-md-offset-3">
+                                <img ng-src="{{item.image}}" class="img-responsive imgBreak">
+                            </div>
+                            <div class="col-md-12 col-md-offset-1">
+                                <p>{{item.name}}</p>
+                            </div>
+                            <div class="col-md-8 col-md-offset-1">
+                                <p>{{item.description}}</p>
+                            </div>
+                            <div class="col-md-8 col-md-offset-1">
+                                <p>{{item.price}}</p>
+                            </div>
+                        </div>
+                    </div>
+-->
+    <!--                    <div class="row">-->
+    <!--
+                        <div class="col-md-12 col-md-offset-7 ">
+                            <div class="col-md-5 col-md-pull-2">
+
+                                                                   <div class="button-area">
+                                    <label ng-show="token">{{item.upVoted}}</label>
+                                    <button class="btn btn-danger glyphicon glyphicon-thumbs-up" ng-click="like(item._id)" title="Like" ng-show="token"></button>
+                                </div>
+                            </div>
+                            <div class="col-md-5 col-md-pull-5">
+                                
+                                <div class="button-area">
+                                    <label ng-show="token">{{item.downVoted}}</label>
+                                    <button class="btn btn-danger glyphicon glyphicon-thumbs-down" ng-click="unlike(item._id)" title="unLike" ng-show="token"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+-->
+    <!--
+                    <div class="row">
+                        
+                        <div class="col-md-2 col-md-offset-2">
+                            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModalAddComment" ng-click="selectItem(item)">Comment</button>
+                        </div>
+                        
+                        <div class="col-md-2 col-md-offset-1" ng-if="priv == 'Admin'">
+                            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModalEdit" ng-click="editShowing(item._id);selectItem(item)">Edit</button>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-md-2">
+                                <button ng-click="showHideComment(item._id)" class="btn btn-warning btn-lg" title="Show" ng-show="token">Show Comment</button>
+                            </div>
+                        </div>
+                    </div>
+-->
+
+    <!--
+                    <div class="row">
+                        <div class="col-md-12 col-md-offset-1">
+                            <div ng-repeat="comment in item.Comment track by $index">
+                                <div ng-if="item.isShowingComment">
+                                    <div class="col-md-8">
+                                        <p>{{comment}}</p>
+                                    </div>
+                                    <div class="col-md-2 col-md-pull-1">
+                                        <button ng-click="removeComment(item._id, $index)" class="glyphicon glyphicon-trash btn btn-danger" title="Remove"></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+-->
+    <!--        -->
+
+
+
+
+
+
+
+
+
+
+    <!--        -->
+    <!-- Modal -->
+    <div class="modal fade" id="myModalEdit" role="dialog" ng-if="selectedItem != null">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" ng-click="loadData()">&times;</button>
+                    <h4 class="modal-title TitleitemSeason">{{selectedItem.name}}</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-10 col-md-offset-1">
+                            <div>
+                                <input ng-model="selectedItem.name" class="form-control SeasonEditstyle">
+                                <input ng-model="selectedItem.image" class="form-control SeasonEditstyle">
+                                <input ng-model="selectedItem.price" class="form-control SeasonEditstyle" min="0">
+                                <select ng-model="selectedItem.SeasonTemp" class="form-control SeasonEditstyle">
+                                    <option>{{selectedItem.item.Season}}</option>
+                                    <option value="Fall">Fall</option>
+                                    <option value="Winter">Winter</option>
+                                    <option value="Spring">Spring</option>
+                                    <option value="Summer">Summer</option>
+                                </select>
+                                <select ng-model="selectedItem.location" class="form-control SeasonEditstyle">
+                                    <option value="" selected="selected">{{selectedItem.item.location}}</option>
+                                    <option value="Lebanon">Lebanon</option>
+                                    <option value="USA">USA</option>
+                                    <option value="UK">UK</option>
+                                    <option value="Palestine">Palestine</option>
+                                </select>
+                                <textarea ng-model="selectedItem.description" class="form-control SeasonEditstyle"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button ng-click="deleteoffear(selectedItem._id);loadData()" class="btn btn-danger" title="Remove" ng-if="priv == 'Admin'" data-dismiss="modal">Delete</button>
+                    <button ng-click="editoffear(selectedItem._id);loadData();editSeason(item._id)" class="btn btn-success" data-dismiss="modal">Save</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="loadData()">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="myModalAddComment" role="dialog" ng-if="selectedItem != null">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" ng-click="loadData()">&times;</button>
+                    <h4 class="modal-title">Add New Comment</h4>
+                </div>
+                <div class="modal-body">
+                    <!--add Comment part-->
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-1">
+                            <div>
+                                <textarea ng-model="commentTxt" placeholder="Enter a Comment" class="form-control SeasonEditstyle" placeholder="Enter a Comment"></textarea>
+                                <div class="col-md-9 col-md-offset-11">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button ng-click="addComment(selectedItem._id, commentTxt);showHideAddComment(selectedItem._id)" class="btn btn-success" title="Add" data-dismiss="modal">Add</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="loadData()">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

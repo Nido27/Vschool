@@ -1,0 +1,436 @@
+<div class="row"><br><br></div>
+<div class="row">
+    <div class="col-md-3">
+
+
+</div>
+
+<div class="col-md-6">
+    <div class="bodyuser">
+        <div class="col-md-12" id="myAccountTitle">
+            <p >My Account</p>
+        </div>
+        <div class="col-md-12">
+        </div>
+        <div ng-init="loadUserById()">
+            <!--    Image part  -->
+            <div class="row">
+                <div ng-if="!item.ShowingImage">
+                    <div class="row">
+                        <div id="imagepart" class="col-md-12">
+                            <label>Profile Image :</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4"></div>
+                        <div id="imagepart" class="col-md-4">
+                            <img ng-src="{{item.image}}"  class="img-thumbnail" width="300" height="300">
+                        </div>
+                    </div>
+                    <br>
+                    <div id="imagepart" class="col-md-12">
+                        <button ng-click="editIamge()" class="myAccountChangeProfileImage myAccountchangeBtn">Change Profile Image</button>
+                    </div>
+                </div>
+                <div  ng-if="item.ShowingImage">
+                   <div class="row">
+                       <div class="col-md-12" id="imagepart">
+                        <label>Profile Image :</label>
+                    </div>
+                   </div>
+                    <div class="row">
+                       <div class="col-md-4"></div>
+                        <div class="col-md-4">
+                       <img ng-src="{{item.image}}"  class="img-thumbnail" width="300" height="300">
+                        
+                    </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-5">
+                            <input class="form-control myAccountSInput" type="text" name="ProfileImage" placeholder="Profile Image" ng-model="item.image" />
+                        </div>
+                         <div class="col-md-2">
+                        <button ng-click="editUser(item._id)" class="btn btn-success myAccountSaveCanelBtn">Save</button>
+                    </div>
+                    <div class="col-md-2">
+                        <button ng-click="editIamge()" class="btn btn-danger  myAccountSaveCanelBtn">Canel</button>
+                    </div>
+                    </div>
+                   
+                </div>
+            </div>
+            <hr>
+            <!--    Frist name  part  -->
+            <div class="row">
+                <div ng-if="!item.ShowingFirstName">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-2 ">
+                        <label class="myAccountLabelTitle">First Name :</label>
+                    </div>
+                    <div class="col-md-5 ">
+                        <p class="myAccountText">{{item.firstName}}</p>
+                    </div>
+                    <div class="col-md-2"></div>
+                    <div class="col-md-2">
+                        <button ng-click="editFirstName()" class=" myAccountchangeBtn"><i class="glyphicon glyphicon-pencil"></i></button>
+                    </div>
+                </div>
+                <div ng-if="item.ShowingFirstName">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-2">
+                        <label class="myAccountLabelTitle">First Name :</label>
+                    </div>
+                    <div class="col-md-5">
+                        <input class="form-control myAccountSInput" type="text" name="First Name" placeholder="Frist Name" ng-model="item.firstName" />
+                    </div>
+                    <div class="col-md-1">
+                        <button ng-click="editUser(item._id)" class="btn btn-success myAccountSaveCanelBtn">Save</button>
+                    </div>
+                    <div class="col-md-1"></div>
+                    <div class="col-md-1">
+                        <button ng-click="editFirstName()" class="btn btn-danger myAccountSaveCanelBtn">Canel</button>
+
+                    </div>
+                </div>
+            </div>
+            <hr>
+
+            <!--    Last name  part  -->
+            <div class="row">
+                <div ng-if="!item.ShowingLastName">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-2">
+                        <label class="myAccountLabelTitle">Last Name :</label>
+                    </div>
+                    <div class="col-md-5 ">
+                        <p class="myAccountText">{{item.lastName}}</p>
+                    </div>
+                    <div class="col-md-2"></div>
+                    <div class="col-md-2">
+                        <button ng-click="editLastName()" class=" myAccountchangeBtn"><i class="glyphicon glyphicon-pencil"></i></button>
+                    </div>
+                </div>
+                <div ng-if="item.ShowingLastName">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-2 ">
+                        <label class="myAccountLabelTitle">Last Name :</label>
+                    </div>
+                    <div class="col-md-5">
+                        <input class="form-control myAccountSInput" type="text" name="Last Name" placeholder="Last Name" ng-model="item.lastName" />
+                    </div>
+                    <div class="col-md-1">
+                        <button ng-click="editUser(item._id)" class="btn btn-success myAccountSaveCanelBtn">Save</button>
+                    </div>
+                    <div class="col-md-1"></div>
+                    <div class="col-md-1">
+                        <button ng-click="editLastName()" class="btn btn-danger myAccountSaveCanelBtn">Canel</button>
+                    </div>
+
+                </div>
+            </div>
+            <hr>
+            <!--    Username  part  -->
+            <div class="row">
+                <div ng-if="!item.ShowingUsername">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-2">
+                        <label class="myAccountLabelTitle">Username :</label>
+                    </div>
+                    <div class="col-md-5 ">
+                        <p class="myAccountText">{{item.Username}}</p>
+                    </div>
+                    <div class="col-md-2"></div>
+                    <div class="col-md-2">
+                        <button ng-click="editUsername()" class=" myAccountchangeBtn "><i class="glyphicon glyphicon-pencil"></i></button>
+                    </div>
+                </div>
+                <div ng-if="item.ShowingUsername">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-2">
+                        <label class="myAccountLabelTitle">Username :</label>
+                    </div>
+                    <div class="col-md-5">
+                        <input class="form-control myAccountSInput" type="text" name="Username" placeholder="Username" ng-model="item.Username" />
+                    </div>
+                    <div class="col-md-1">
+                        <button ng-click="editUser(item._id)" class="btn btn-success myAccountSaveCanelBtn">Save</button>
+                    </div>
+                    <div class="col-md-1"></div>
+                    <div class="col-md-1">
+                        <button ng-click="editUsername()" class="btn btn-danger myAccountSaveCanelBtn">Canel</button>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <!--    Email  part  -->
+            <div class="row">
+                <div ng-if="!item.ShowingEmail">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-2">
+                        <label class="myAccountLabelTitle">Email :</label>
+                    </div>
+                    <div class="col-md-5 ">
+                        <p class="myAccountText">{{item.Email}}</p>
+                    </div>
+                    <div class="col-md-2"></div>
+                    <div class="col-md-2">
+                        <button ng-click="editEmail()" class=" myAccountchangeBtn"><i class="glyphicon glyphicon-pencil"></i></button>
+                    </div>
+                </div>
+                <div ng-if="item.ShowingEmail">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-2">
+                        <label class="myAccountLabelTitle">Email :</label>
+                    </div>
+                    <div class="col-md-5">
+                        <input  class="form-control myAccountSInput" type="text" name="Email" placeholder="Email" ng-model="item.Email" />
+                    </div>
+                    <div class="col-md-1">
+                        <button ng-click="editUser(item._id)" class="btn btn-success myAccountSaveCanelBtn">Save</button>
+                    </div>
+                    <div class="col-md-1"></div>
+                    <div class="col-md-1">
+                        <button ng-click="editEmail()" class="btn btn-danger myAccountSaveCanelBtn">Canel</button>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <!--   phone part -->
+            <div class="row">
+                <div ng-if="!item.Showingphone">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-2">
+                        <label class="myAccountLabelTitle">My phone :</label>
+                    </div>
+                    <div class="col-md-5 ">
+                        <p class="myAccountText">{{item.phone}}</p>
+                    </div>
+                    <div class="col-md-2"></div>
+                    <div class="col-md-2">
+                        <button ng-click="editphone()" class=" myAccountchangeBtn"><i class="glyphicon glyphicon-pencil"></i></button>
+                    </div>
+                </div>
+                <div ng-if="item.Showingphone">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-2">
+                        <label class="myAccountLabelTitle">My phone :</label>
+                    </div>
+                    <div class="col-md-5">
+                        <div>
+                            <div>
+                                <div class="input-group">
+                                    <div class="input-group-btn">
+                                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">+1 <span class="caret"></span></button>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="">+961</a></li>
+                                            <li><a href="">+963</a></li>
+                                            <li><a href="">+962</a></li>
+
+                                        </ul>
+                                    </div>
+                                    <!-- /btn-group -->
+                                    <input class="form-control myAccountSInput" type="text" name="phone" placeholder="phone" ng-model="item.phone" />
+
+                                </div>
+                                <!-- /input-group -->
+                            </div>
+                            <!-- /.col-lg-6 -->
+
+                        </div>
+                        <!-- /.row -->
+                    </div>
+                    <div class="col-md-1">
+                        <button ng-click="editUser(item._id)" class="btn btn-success myAccountSaveCanelBtn">Save</button>
+                    </div>
+                    <div class="col-md-1"></div>
+                    <div class="col-md-1">
+                        <button ng-click="editphone()" class="btn btn-danger myAccountSaveCanelBtn">Canel</button>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <!--    Country  part  -->
+            <div class="row">
+                <div ng-if="!item.ShowingCountry">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-2">
+                        <label class="myAccountLabelTitle">Country :</label>
+                    </div>
+                    <div class="col-md-5 ">
+                        <p class="myAccountText">{{item.Country}}</p>
+                    </div>
+                    <div class="col-md-2"></div>
+                    <div class="col-md-2">
+                        <button ng-click="editCountry()" class=" myAccountchangeBtn"><i class="glyphicon glyphicon-pencil"></i></button>
+                    </div>
+                </div>
+                <div ng-if="item.ShowingCountry">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-2">
+                        <label class="myAccountLabelTitle">Country :</label>
+                    </div>
+                    <div class="col-md-5">
+                        <select class="form-control myAccountSInput" name="country" ng-model="item.Country">
+                        <option>{{item.Country}}</option>
+                        <option value="Brazil">Brazil</option>
+                        <option value="Canada">Canada</option>
+                        <option value="China">China</option>
+                        <option value="France">France</option>
+                        <option value="Germany">Germany</option>
+                        <option value="Greek">Greek</option>
+                        <option value="Italy">Italy</option>
+                        <option value="Japan">Japan</option>
+                        <option value="Lebanon">Lebanon</option>
+                        <option value="Spain">Spain</option>
+                        <option value="UK">UK</option>
+                        <option value="USA">USA</option>
+                    </select>
+                    </div>
+                    <div class="col-md-1">
+                        <button ng-click="editUser(item._id)" class="btn btn-success myAccountSaveCanelBtn">Save</button>
+                    </div>
+                    <div class="col-md-1"></div>
+                    <div class="col-md-1">
+                        <button ng-click="editCountry()" class="btn btn-danger myAccountSaveCanelBtn">Canel</button>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <!--    Gender  part  -->
+            <div class="row">
+                <div ng-if="!item.ShowingGender">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-2">
+                        <label class="myAccountLabelTitle">Gender :</label>
+                    </div>
+                    <div class="col-md-5 ">
+                        <p class="myAccountText">{{item.Gender}}</p>
+                    </div>
+                    <div class="col-md-2"></div>
+                    <div class="col-md-2">
+                        <button ng-click="editGender()" class=" myAccountchangeBtn"><i class="glyphicon glyphicon-pencil"></i></button>
+                    </div>
+                </div>
+                <div ng-if="item.ShowingGender">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-2">
+                        <label class="myAccountLabelTitle">Gender :</label>
+                    </div>
+                    <div class="">
+                        <div class="col-md-2">
+                            <input type="radio" name="gender" value="Male" ng-model="item.Gender" /><span class="myAccountLabelTitle">Male</span>
+                        </div>
+                        <div class="col-md-1"></div>
+                        <div class="col-md-2">
+                            <input type="radio" name="gender" value="Female" ng-model="item.Gender" /><span class="myAccountLabelTitle">Female</span>
+                        </div>
+                        <div class="col-md-1">
+                            <button ng-click="editUser(item._id)" class="btn btn-success myAccountSaveCanelBtn">Save</button>
+                        </div>
+                        <div class="col-md-1"></div>
+                        <div class="col-md-1">
+                            <button ng-click="editGender()" class="btn btn-danger myAccountSaveCanelBtn">Canel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <!--    Password  part  -->
+
+            <div class="row">
+                <div ng-if="!item.ShowingPassword">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-2">
+                        <label class="myAccountLabelTitle">Password :</label>
+                    </div>
+                    <div class="col-md-5">
+                        <label class="myAccountLabelTitle">Click to Changed it &nbsp; &nbsp; <span class="glyphicon glyphicon-hand-right"></span></label>
+                    </div>
+                    <div class="col-md-2"></div>
+                    <div class="col-md-2">
+                        <button ng-click="editPassword()" class=" myAccountchangeBtn"><i class="glyphicon glyphicon-pencil"></i></button>
+                    </div>
+                </div>
+                <div ng-if="item.ShowingPassword">
+
+                    <div class="">
+                        <form name="PasswordForm">
+                            <div class="row">
+                                <div class="col-md-1"></div>
+                                <div class="col-md-2">
+                                    <label class="myAccountLabelTitle">Password :</label>
+                                </div>
+                                <div class="col-md-4">
+                                    <input class="form-control myAccountSInput" type="Password" name="Password" placeholder="Enter a new Password" ng-model="item.Password1" required />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-1"></div>
+                                <div class="col-md-2">
+                                    <label class="myAccountLabelTitle">Comfirm Password :</label>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <input class="form-control myAccountSInput" type="Password" name="Password2" placeholder="Comfirm Password" ng-model="item.Password2" required/>
+                                </div>
+                            </div>
+
+                        </form>
+                        <div class="row">
+                            <div class="col-md-8"></div>
+                            <div class="col-md-1">
+                                <button ng-click="editSavePassword(item._id)" ng-disabled="PasswordForm.$invalid || item.Password1 != item.Password2" class="btn btn-success myAccountSaveCanelBtn">Save</button>
+                            </div>
+                            <div class="col-md-1"></div>
+                            <div class="col-md-1">
+                                <button ng-click="editPassword()" class="btn btn-danger myAccountSaveCanelBtn">Canel</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <hr>
+
+            <!--    Birthday Date  part  -->
+            <div class="row">
+                <div ng-if="!item.ShowingAge">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-2">
+                        <label class="myAccountLabelTitle">Birthday Date :</label>
+                    </div>
+                    <div class="col-md-5 ">
+                        <p class="myAccountText">{{item.age | date: "MM/dd/yyyy"}}</p>
+                    </div>
+                    <div class="col-md-2"></div>
+                    <div class="col-md-2">
+                        <button ng-click="editAge()" class=" myAccountchangeBtn"><i class="glyphicon glyphicon-pencil"></i></button>
+                    </div>
+                </div>
+                <div ng-if="item.ShowingAge">
+                    <div class="col-md-1"></div>
+                    <div>
+                        <div class="col-md-2">
+                            <label class="myAccountLabelTitle">Birthday Date :</label>
+                        </div>
+                        <div class="col-md-5">
+                            <input class="form-control myAccountSInput" type="date" name="Birthday Date" ng-model="item.age" />
+                        </div>
+                        <div class="col-md-1">
+                            <button ng-click="editUser(item._id)" class="btn btn-success myAccountSaveCanelBtn">Save</button>
+                        </div>
+                        <div class="col-md-1"></div>
+                        <div class="col-md-1">
+                            <button ng-click="editAge()" class="btn btn-danger myAccountSaveCanelBtn">Canel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<div class="row"><br><br></div>
